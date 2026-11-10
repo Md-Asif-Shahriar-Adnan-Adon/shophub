@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Categories — ShopHub Admin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/css/global.css" />
+  <link rel="stylesheet" href="../assets/css/admin-shared.css" />
+  <link rel="stylesheet" href="../assets/css/admin-categories.css" />
+</head>
+<body class="admin-body">
+  <div class="admin-layout">
+    <aside class="a-sidebar" id="aSidebar">
+      <div class="a-brand"><a href="../index.html" class="logo">Shop<span>Hub</span></a><span class="a-brand-badge">Admin</span></div>
+      <div class="a-admin-mini"><img src="https://i.pravatar.cc/80?img=68" alt="" /><div><strong>Super Admin</strong><span>admin@shophub.com</span></div></div>
+      <nav class="a-nav">
+        <a href="dashboard.html" class="a-link"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="9" rx="1"/><rect x="14" y="3" width="7" height="5" rx="1"/><rect x="14" y="12" width="7" height="9" rx="1"/><rect x="3" y="16" width="7" height="5" rx="1"/></svg>Dashboard</a>
+        <a href="vendors.html" class="a-link"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>Vendors</a>
+        <a href="products.html" class="a-link"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 7l-8-4-8 4 8 4 8-4z"/><path d="M4 7v10l8 4 8-4V7"/><path d="M12 11v10"/></svg>Products</a>
+        <a href="orders.html" class="a-link"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><path d="M3 6h18M16 10a4 4 0 0 1-8 0"/></svg>Orders</a>
+        <a href="payouts.html" class="a-link"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>Payouts</a>
+        <a href="customers.html" class="a-link"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>Customers</a>
+        <div class="a-divider"></div>
+        <div class="a-nav-label">System</div>
+        <a href="categories.html" class="a-link active"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>Categories</a>
+        <a href="settings.html" class="a-link"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>Settings</a>
+        <div class="a-divider"></div>
+        <a href="login.html" class="a-link a-link--danger" id="aLogout"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>Logout</a>
+      </nav>
+    </aside>
+
+    <div class="a-main">
+      <header class="a-topbar">
+        <button class="a-menu-toggle" id="aMenuToggle"><span></span><span></span><span></span></button>
+        <div class="a-search"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg><input type="text" placeholder="Search categories..." /></div>
+        <div class="a-topbar-right">
+          <button class="a-icon-btn"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></svg><span class="a-dot"></span></button>
+          <a href="settings.html" class="a-user"><img src="https://i.pravatar.cc/80?img=68" alt="" /><strong>Admin</strong></a>
+        </div>
+      </header>
+
+      <div class="a-content">
+        <div class="a-pagehead">
+          <div><h1>Categories</h1><p>Manage product categories and subcategories</p></div>
+          <button class="btn btn--primary btn--sm" id="addCatBtn">+ Add Category</button>
+        </div>
+
+        <div class="a-card">
+          <div class="cat-tree" id="catTree">
+            <!-- Parent: Electronics -->
+            <div class="cat-parent">
+              <div class="cat-row">
+                <span class="cat-toggle" data-toggle>▾</span>
+                <span class="cat-icon">📱</span>
+                <strong>Electronics</strong>
+                <span class="cat-count">12 subcategories · 24,892 products</span>
+                <div class="cat-actions">
+                  <button class="icon-action" title="Edit"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4z"/></svg></button>
+                  <button class="icon-action icon-action--danger" title="Delete"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"/></svg></button>
+                </div>
+              </div>
+              <div class="cat-children">
+                <div class="cat-row cat-row--child">
+                  <span class="cat-icon">📱</span><strong>Smartphones</strong>
+                  <span class="cat-count">4,210 products</span>
+                  <div class="cat-actions">
+                    <button class="icon-action"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4z"/></svg></button>
+                    <button class="icon-action icon-action--danger"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"/></svg></button>
+                  </div>
+                </div>
+                <div class="cat-row cat-row--child">
+                  <span class="cat-icon">💻</span><strong>Laptops</strong>
+                  <span class="cat-count">3,820 products</span>
+                  <div class="cat-actions">
+                    <button class="icon-action"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4z"/></svg></button>
+                    <button class="icon-action icon-action--danger"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"/></svg></button>
+                  </div>
+                </div>
+                <div class="cat-row cat-row--child">
+                  <span class="cat-icon">🎧</span><strong>Audio</strong>
+                  <span class="cat-count">2,480 products</span>
+                  <div class="cat-actions">
+                    <button class="icon-action"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4z"/></svg></button>
+                    <button class="icon-action icon-action--danger"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"/></svg></button>
+                  </div>
+                </div>
+                <div class="cat-row cat-row--child">
+                  <span class="cat-icon">⌚</span><strong>Wearables</strong>
+                  <span class="cat-count">1,920 products</span>
+                  <div class="cat-actions">
+                    <button class="icon-action"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4z"/></svg></button>
+                    <button class="icon-action icon-action--danger"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"/></svg></button>
+                  </div>
+                </div>
+                <div class="cat-row cat-row--child cat-row--add">
+                  <button class="link" style="font-size:12px">+ Add subcategory</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Parent: Fashion -->
+            <div class="cat-parent">
+              <div class="cat-row">
+                <span class="cat-toggle" data-toggle>▾</span>
+                <span class="cat-icon">👕</span>
+                <strong>Fashion</strong>
+                <span class="cat-count">8 subcategories · 18,420 products</span>
+                <div class="cat-actions">
+                  <button class="icon-action"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4z"/></svg></button>
+                  <button class="icon-action icon-action--danger"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"/></svg></button>
+                </div>
+              </div>
+              <div class="cat-children">
+                <div class="cat-row cat-row--child">
+                  <span class="cat-icon">👔</span><strong>Men's Clothing</strong>
+                  <span class="cat-count">6,820 products</span>
+                  <div class="cat-actions">
+                    <button class="icon-action"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4z"/></svg></button>
+                    <button class="icon-action icon-action--danger"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"/></svg></button>
+                  </div>
+                </div>
+                <div class="cat-row cat-row--child">
+                  <span class="cat-icon">👗</span><strong>Women's Clothing</strong>
+                  <span class="cat-count">8,420 products</span>
+                  <div class="cat-actions">
+                    <button class="icon-action"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4z"/></svg></button>
+                    <button class="icon-action icon-action--danger"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"/></svg></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Parent: Home & Living -->
+            <div class="cat-parent">
+              <div class="cat-row">
+                <span class="cat-toggle" data-toggle>▾</span>
+                <span class="cat-icon">🏠</span>
+                <strong>Home & Living</strong>
+                <span class="cat-count">6 subcategories · 12,840 products</span>
+                <div class="cat-actions">
+                  <button class="icon-action"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4z"/></svg></button>
+                  <button class="icon-action icon-action--danger"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"/></svg></button>
+                </div>
+              </div>
+              <div class="cat-children">
+                <div class="cat-row cat-row--child">
+                  <span class="cat-icon">🛋️</span><strong>Furniture</strong>
+                  <span class="cat-count">4,210 products</span>
+                  <div class="cat-actions">
+                    <button class="icon-action"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4z"/></svg></button>
+                    <button class="icon-action icon-action--danger"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"/></svg></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Parent: Beauty -->
+            <div class="cat-parent">
+              <div class="cat-row">
+                <span class="cat-toggle" data-toggle>▾</span>
+                <span class="cat-icon">💄</span>
+                <strong>Beauty</strong>
+                <span class="cat-count">4 subcategories · 8,420 products</span>
+                <div class="cat-actions">
+                  <button class="icon-action"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4z"/></svg></button>
+                  <button class="icon-action icon-action--danger"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"/></svg></button>
+                </div>
+              </div>
+              <div class="cat-children">
+                <div class="cat-row cat-row--child">
+                  <span class="cat-icon">💅</span><strong>Skincare</strong>
+                  <span class="cat-count">3,220 products</span>
+                  <div class="cat-actions">
+                    <button class="icon-action"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4z"/></svg></button>
+                    <button class="icon-action icon-action--danger"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"/></svg></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Add Category Modal -->
+  <div class="a-modal-overlay" id="catModal">
+    <div class="a-modal">
+      <div class="a-modal-head"><h2>Add Category</h2><button class="a-modal-close" id="cmClose">✕</button></div>
+      <div class="a-modal-body">
+        <div class="field"><label>Category name *</label><input type="text" id="cmName" placeholder="e.g. Sports & Outdoors" /></div>
+        <div class="field"><label>Icon (emoji)</label><input type="text" id="cmIcon" placeholder="⚽" maxlength="2" /></div>
+        <div class="field"><label>Parent category</label>
+          <select id="cmParent">
+            <option value="">— None (top level) —</option>
+            <option>Electronics</option>
+            <option>Fashion</option>
+            <option>Home & Living</option>
+            <option>Beauty</option>
+          </select>
+        </div>
+      </div>
+      <div class="a-modal-actions">
+        <button class="btn btn--ghost btn--sm" id="cmCancel">Cancel</button>
+        <button class="btn btn--primary btn--sm" id="cmSave">Add Category</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="a-overlay" id="aOverlay"></div>
+  <script src="../assets/js/admin-shared.js"></script>
+  <script>
+    // Toggle children
+    document.querySelectorAll('[data-toggle]').forEach(t => {
+      t.addEventListener('click', () => {
+        const parent = t.closest('.cat-parent');
+        const children = parent.querySelector('.cat-children');
+        if (!children) return;
+        const hidden = children.style.display === 'none';
+        children.style.display = hidden ? '' : 'none';
+        t.textContent = hidden ? '▾' : '▸';
+      });
+    });
+
+    // Modal
+    const catModal = document.getElementById('catModal');
+    document.getElementById('addCatBtn')?.addEventListener('click', () => catModal.classList.add('show'));
+    document.getElementById('cmClose')?.addEventListener('click', () => catModal.classList.remove('show'));
+    document.getElementById('cmCancel')?.addEventListener('click', () => catModal.classList.remove('show'));
+    document.getElementById('cmSave')?.addEventListener('click', () => {
+      const name = document.getElementById('cmName').value.trim();
+      if (!name) { alert('Name required'); return; }
+      catModal.classList.remove('show');
+      showAToast(`Category "${name}" added`);
+    });
+  </script>
+</body>
+</html>

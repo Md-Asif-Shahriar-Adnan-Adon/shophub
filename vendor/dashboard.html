@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard — ShopHub Seller Center</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/css/global.css" />
+  <link rel="stylesheet" href="../assets/css/vendor-shared.css" />
+  <link rel="stylesheet" href="../assets/css/vendor-dashboard.css" />
+</head>
+<body class="vendor-body">
+  <div class="vendor-layout">
+
+    <!-- SIDEBAR -->
+    <aside class="v-sidebar" id="vSidebar">
+      <div class="v-brand">
+        <a href="../index.html" class="logo">Shop<span>Hub</span></a>
+        <span class="v-brand-badge">Seller</span>
+      </div>
+      <div class="v-shop-mini">
+        <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=80&q=80" alt="TechZone" />
+        <div>
+          <strong>TechZone</strong>
+          <span>Active Shop</span>
+        </div>
+      </div>
+
+      <nav class="v-nav">
+        <a href="dashboard.html" class="v-link active">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="3" y="3" width="7" height="9" rx="1"/><rect x="14" y="3" width="7" height="5" rx="1"/>
+            <rect x="14" y="12" width="7" height="9" rx="1"/><rect x="3" y="16" width="7" height="5" rx="1"/>
+          </svg>
+          Dashboard
+        </a>
+        <a href="products.html" class="v-link">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M20 7l-8-4-8 4 8 4 8-4z"/><path d="M4 7v10l8 4 8-4V7"/><path d="M12 11v10"/>
+          </svg>
+          Products
+        </a>
+        <a href="orders.html" class="v-link">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+            <path d="M3 6h18M16 10a4 4 0 0 1-8 0"/>
+          </svg>
+          Orders
+          <span class="v-badge">4</span>
+        </a>
+        <a href="earnings.html" class="v-link">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="12" y1="1" x2="12" y2="23"/>
+            <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+          </svg>
+          Earnings
+        </a>
+        <a href="reviews.html" class="v-link">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+          </svg>
+          Reviews
+        </a>
+        <div class="v-divider"></div>
+        <div class="v-nav-label">Settings</div>
+        <a href="shop-settings.html" class="v-link">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="3"/>
+            <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+          </svg>
+          Shop Settings
+        </a>
+        <div class="v-divider"></div>
+        <a href="login.html" class="v-link v-link--danger" id="vLogout">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/>
+            <polyline points="16 17 21 12 16 7"/>
+            <line x1="21" y1="12" x2="9" y2="12"/>
+          </svg>
+          Logout
+        </a>
+      </nav>
+    </aside>
+
+    <!-- MAIN -->
+    <div class="v-main">
+
+      <!-- TOPBAR -->
+      <header class="v-topbar">
+        <button class="v-menu-toggle" id="vMenuToggle"><span></span><span></span><span></span></button>
+        <div class="v-search">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/>
+          </svg>
+          <input type="text" placeholder="Search products, orders..." />
+        </div>
+        <div class="v-topbar-right">
+          <button class="v-icon-btn" aria-label="Notifications">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/>
+              <path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/>
+            </svg>
+            <span class="v-dot"></span>
+          </button>
+          <a href="shop-settings.html" class="v-user">
+            <img src="https://i.pravatar.cc/80?img=12" alt="User" />
+            <strong>John Doe</strong>
+          </a>
+        </div>
+      </header>
+
+      <!-- CONTENT -->
+      <div class="v-content">
+
+        <div class="v-pagehead">
+          <div>
+            <h1>Dashboard</h1>
+            <p>Welcome back, here's your shop overview</p>
+          </div>
+          <a href="add-product.html" class="btn btn--primary btn--sm">+ Add Product</a>
+        </div>
+
+        <!-- KPI cards -->
+        <div class="kpi-grid">
+          <div class="kpi-card">
+            <div class="kpi-icon kpi-icon--indigo">💰</div>
+            <div>
+              <span class="kpi-label">Total Revenue</span>
+              <strong class="kpi-value">$24,860</strong>
+              <span class="kpi-trend kpi-trend--up">↑ 12.5% vs last month</span>
+            </div>
+          </div>
+          <div class="kpi-card">
+            <div class="kpi-icon kpi-icon--blue">📦</div>
+            <div>
+              <span class="kpi-label">Total Orders</span>
+              <strong class="kpi-value">1,248</strong>
+              <span class="kpi-trend kpi-trend--up">↑ 8.2% vs last month</span>
+            </div>
+          </div>
+          <div class="kpi-card">
+            <div class="kpi-icon kpi-icon--amber">🛍️</div>
+            <div>
+              <span class="kpi-label">Products</span>
+              <strong class="kpi-value">248</strong>
+              <span class="kpi-trend">3 out of stock</span>
+            </div>
+          </div>
+          <div class="kpi-card">
+            <div class="kpi-icon kpi-icon--green">⭐</div>
+            <div>
+              <span class="kpi-label">Avg Rating</span>
+              <strong class="kpi-value">4.8</strong>
+              <span class="kpi-trend">1,248 reviews</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Chart + Recent orders -->
+        <div class="dash-grid">
+          <div class="v-card">
+            <div class="v-card-head">
+              <h2>Revenue (last 7 days)</h2>
+              <select class="mini-select">
+                <option>Last 7 days</option>
+                <option>Last 30 days</option>
+                <option>Last 90 days</option>
+              </select>
+            </div>
+            <div class="chart-placeholder">
+              <div class="chart-bars">
+                <div class="cbar" style="height:45%"><span>Mon</span></div>
+                <div class="cbar" style="height:70%"><span>Tue</span></div>
+                <div class="cbar" style="height:55%"><span>Wed</span></div>
+                <div class="cbar" style="height:85%"><span>Thu</span></div>
+                <div class="cbar" style="height:65%"><span>Fri</span></div>
+                <div class="cbar" style="height:90%"><span>Sat</span></div>
+                <div class="cbar" style="height:75%"><span>Sun</span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="v-card">
+            <div class="v-card-head">
+              <h2>Top Products</h2>
+              <a href="products.html" class="link">View all</a>
+            </div>
+            <div class="top-products">
+              <div class="tp-item">
+                <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=80&q=80" alt="Headphones" />
+                <div>
+                  <strong>Wireless Headphones Pro</strong>
+                  <span>128 sold • $89.99</span>
+                </div>
+                <em>🔥</em>
+              </div>
+              <div class="tp-item">
+                <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=80&q=80" alt="MacBook" />
+                <div>
+                  <strong>MacBook Air M2</strong>
+                  <span>62 sold • $999.00</span>
+                </div>
+                <em>🔥</em>
+              </div>
+              <div class="tp-item">
+                <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=80&q=80" alt="Watch" />
+                <div>
+                  <strong>Smart Watch Series 5</strong>
+                  <span>86 sold • $149.00</span>
+                </div>
+                <em>⭐</em>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Recent orders table -->
+        <div class="v-card">
+          <div class="v-card-head">
+            <h2>Recent Orders</h2>
+            <a href="orders.html" class="link">View all →</a>
+          </div>
+          <div class="v-table-wrap">
+            <table class="v-table">
+              <thead>
+                <tr>
+                  <th>Order</th>
+                  <th>Customer</th>
+                  <th>Date</th>
+                  <th>Total</th>
+                  <th>Status</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>#48392</strong></td>
+                  <td>Alex Johnson</td>
+                  <td>Nov 3, 2026</td>
+                  <td><strong>$298.19</strong></td>
+                  <td><span class="st st--shipped">Shipped</span></td>
+                  <td><a href="order-detail.html" class="link">View</a></td>
+                </tr>
+                <tr>
+                  <td><strong>#48214</strong></td>
+                  <td>Maria Chen</td>
+                  <td>Oct 28, 2026</td>
+                  <td><strong>$149.00</strong></td>
+                  <td><span class="st st--delivered">Delivered</span></td>
+                  <td><a href="order-detail.html" class="link">View</a></td>
+                </tr>
+                <tr>
+                  <td><strong>#48102</strong></td>
+                  <td>Sam Rahman</td>
+                  <td>Oct 22, 2026</td>
+                  <td><strong>$88.00</strong></td>
+                  <td><span class="st st--processing">Processing</span></td>
+                  <td><a href="order-detail.html" class="link">View</a></td>
+                </tr>
+                <tr>
+                  <td><strong>#47988</strong></td>
+                  <td>John Doe</td>
+                  <td>Oct 15, 2026</td>
+                  <td><strong>$59.00</strong></td>
+                  <td><span class="st st--cancelled">Cancelled</span></td>
+                  <td><a href="order-detail.html" class="link">View</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="v-overlay" id="vOverlay"></div>
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/vendor-shared.js"></script>
+</body>
+</html>

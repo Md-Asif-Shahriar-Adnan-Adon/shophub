@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Orders — ShopHub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/css/global.css" />
+  <link rel="stylesheet" href="../assets/css/account.css" />
+  <link rel="stylesheet" href="../assets/css/orders.css" />
+</head>
+<body>
+
+  <!-- ================= HEADER ================= -->
+  <header class="header">
+    <div class="container header__inner">
+      <a href="../index.html" class="logo">Shop<span>Hub</span></a>
+      <div class="search">
+        <input type="text" placeholder="Search products, brands, vendors..." />
+        <button class="search__btn" aria-label="Search">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/>
+          </svg>
+        </button>
+      </div>
+      <nav class="header__actions">
+        <a href="wishlist.html" class="icon-btn" aria-label="Wishlist">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"/>
+          </svg>
+        </a>
+        <a href="cart.html" class="icon-btn" aria-label="Cart">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/>
+            <path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"/>
+          </svg>
+          <span class="badge">3</span>
+        </a>
+        <a href="account.html" class="icon-btn" aria-label="Account">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="8" r="4"/><path d="M4 21v-2a6 6 0 0 1 6-6h4a6 6 0 0 1 6 6v2"/>
+          </svg>
+        </a>
+      </nav>
+      <button class="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ================= ACCOUNT LAYOUT ================= -->
+  <main class="container account-layout">
+
+    <!-- ========== SIDEBAR (same as account.html) ========== -->
+    <aside class="account-sidebar" id="accountSidebar">
+      <div class="sidebar-profile">
+        <img src="https://i.pravatar.cc/120?img=12" alt="John Doe" class="sidebar-profile__avatar" />
+        <div>
+          <strong>John Doe</strong>
+          <p>john.doe@example.com</p>
+        </div>
+      </div>
+
+      <nav class="sidebar-nav">
+        <a href="account.html" class="sidebar-link">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/>
+            <rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/>
+          </svg>
+          Dashboard
+        </a>
+        <a href="orders.html" class="sidebar-link active">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+            <path d="M3 6h18M16 10a4 4 0 0 1-8 0"/>
+          </svg>
+          My Orders
+          <span class="sidebar-badge">12</span>
+        </a>
+        <a href="wishlist.html" class="sidebar-link">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"/>
+          </svg>
+          Wishlist
+        </a>
+        <a href="addresses.html" class="sidebar-link">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+            <circle cx="12" cy="10" r="3"/>
+          </svg>
+          Addresses
+        </a>
+        <a href="profile-settings.html" class="sidebar-link">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="3"/>
+            <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+          </svg>
+          Settings
+        </a>
+        <div class="sidebar-divider"></div>
+        <a href="../index.html" class="sidebar-link sidebar-link--danger" id="logoutBtn">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/>
+            <polyline points="16 17 21 12 16 7"/>
+            <line x1="21" y1="12" x2="9" y2="12"/>
+          </svg>
+          Logout
+        </a>
+      </nav>
+    </aside>
+
+    <!-- ========== MAIN CONTENT ========== -->
+    <section class="account-main">
+
+      <!-- Page head -->
+      <div class="page-head">
+        <div>
+          <h1>My Orders</h1>
+          <p class="muted">Track, view and manage all your orders in one place.</p>
+        </div>
+      </div>
+
+      <!-- Toolbar -->
+      <div class="orders-toolbar">
+        <!-- Filter tabs -->
+        <div class="filter-tabs" id="filterTabs">
+          <button class="filter-tab active" data-filter="all">All <span>12</span></button>
+          <button class="filter-tab" data-filter="processing">Processing <span>3</span></button>
+          <button class="filter-tab" data-filter="shipped">Shipped <span>2</span></button>
+          <button class="filter-tab" data-filter="delivered">Delivered <span>6</span></button>
+          <button class="filter-tab" data-filter="cancelled">Cancelled <span>1</span></button>
+        </div>
+
+        <!-- Search -->
+        <div class="order-search">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/>
+          </svg>
+          <input type="text" id="orderSearch" placeholder="Search by order ID or product..." />
+        </div>
+      </div>
+
+      <!-- Orders list -->
+      <div class="orders-list" id="ordersList">
+
+        <!-- ORDER 1: Processing -->
+        <article class="order-card" data-status="processing" data-id="SH-2026-48392" data-product="Wireless Headphones Pro">
+          <div class="order-card__head">
+            <div class="order-card__meta">
+              <p><strong>Order #SH-2026-48392</strong></p>
+              <span>Placed Nov 3, 2026 • 3 items</span>
+            </div>
+            <span class="status status--processing">Processing</span>
+          </div>
+
+          <div class="order-card__items">
+            <div class="order-item">
+              <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=120&q=80" alt="Headphones" />
+              <div>
+                <p>Wireless Headphones Pro</p>
+                <span>TechZone • Qty: 1</span>
+              </div>
+              <strong>$89.99</strong>
+            </div>
+            <div class="order-item">
+              <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=120&q=80" alt="Watch" />
+              <div>
+                <p>Smart Watch Series 5</p>
+                <span>GadgetPro • Qty: 1</span>
+              </div>
+              <strong>$149.00</strong>
+            </div>
+            <div class="order-item">
+              <img src="https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=120&q=80" alt="Sunglasses" />
+              <div>
+                <p>Classic Aviator Sunglasses</p>
+                <span>Fashion Hub • Qty: 1</span>
+              </div>
+              <strong>$45.00</strong>
+            </div>
+          </div>
+
+          <div class="order-card__foot">
+            <div class="order-total">
+              <span>Total:</span>
+              <strong>$298.19</strong>
+            </div>
+            <div class="order-actions">
+              <a href="order-detail.html" class="btn btn--ghost btn--sm">View Details</a>
+              <a href="order-detail.html" class="btn btn--primary btn--sm">Track Order</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- ORDER 2: Shipped -->
+        <article class="order-card" data-status="shipped" data-id="SH-2026-48214" data-product="Smart Watch Series 5">
+          <div class="order-card__head">
+            <div class="order-card__meta">
+              <p><strong>Order #SH-2026-48214</strong></p>
+              <span>Placed Oct 28, 2026 • 1 item</span>
+            </div>
+            <span class="status status--shipped">Shipped</span>
+          </div>
+
+          <div class="order-card__items">
+            <div class="order-item">
+              <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=120&q=80" alt="Watch" />
+              <div>
+                <p>Smart Watch Series 5</p>
+                <span>GadgetPro • Qty: 1</span>
+              </div>
+              <strong>$149.00</strong>
+            </div>
+          </div>
+
+          <div class="order-card__foot">
+            <div class="order-total">
+              <span>Total:</span>
+              <strong>$149.00</strong>
+            </div>
+            <div class="order-actions">
+              <a href="order-detail.html" class="btn btn--ghost btn--sm">View Details</a>
+              <a href="order-detail.html" class="btn btn--primary btn--sm">Track Order</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- ORDER 3: Delivered -->
+        <article class="order-card" data-status="delivered" data-id="SH-2026-48102" data-product="Classic Aviator Sunglasses">
+          <div class="order-card__head">
+            <div class="order-card__meta">
+              <p><strong>Order #SH-2026-48102</strong></p>
+              <span>Placed Oct 22, 2026 • 2 items</span>
+            </div>
+            <span class="status status--delivered">Delivered</span>
+          </div>
+
+          <div class="order-card__items">
+            <div class="order-item">
+              <img src="https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=120&q=80" alt="Sunglasses" />
+              <div>
+                <p>Classic Aviator Sunglasses</p>
+                <span>Fashion Hub • Qty: 1</span>
+              </div>
+              <strong>$45.00</strong>
+            </div>
+            <div class="order-item">
+              <img src="https://images.unsplash.com/photo-1491553895911-0055eca6402d?w=120&q=80" alt="Shoes" />
+              <div>
+                <p>Casual Canvas Shoes</p>
+                <span>Fashion Hub • Qty: 1</span>
+              </div>
+              <strong>$39.00</strong>
+            </div>
+          </div>
+
+          <div class="order-card__foot">
+            <div class="order-total">
+              <span>Total:</span>
+              <strong>$88.00</strong>
+            </div>
+            <div class="order-actions">
+              <a href="order-detail.html" class="btn btn--ghost btn--sm">View Details</a>
+              <button class="btn btn--primary btn--sm reorder-btn">Reorder</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- ORDER 4: Delivered -->
+        <article class="order-card" data-status="delivered" data-id="SH-2026-47988" data-product="Bluetooth Speaker Mini">
+          <div class="order-card__head">
+            <div class="order-card__meta">
+              <p><strong>Order #SH-2026-47988</strong></p>
+              <span>Placed Oct 15, 2026 • 1 item</span>
+            </div>
+            <span class="status status--delivered">Delivered</span>
+          </div>
+
+          <div class="order-card__items">
+            <div class="order-item">
+              <img src="https://images.unsplash.com/photo-1546435770-a3e426bf472b?w=120&q=80" alt="Speaker" />
+              <div>
+                <p>Bluetooth Speaker Mini</p>
+                <span>GadgetPro • Qty: 1</span>
+              </div>
+              <strong>$59.00</strong>
+            </div>
+          </div>
+
+          <div class="order-card__foot">
+            <div class="order-total">
+              <span>Total:</span>
+              <strong>$59.00</strong>
+            </div>
+            <div class="order-actions">
+              <a href="order-detail.html" class="btn btn--ghost btn--sm">View Details</a>
+              <button class="btn btn--primary btn--sm reorder-btn">Reorder</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- ORDER 5: Cancelled -->
+        <article class="order-card" data-status="cancelled" data-id="SH-2026-47821" data-product="Running Sneakers Air">
+          <div class="order-card__head">
+            <div class="order-card__meta">
+              <p><strong>Order #SH-2026-47821</strong></p>
+              <span>Placed Oct 8, 2026 • 1 item</span>
+            </div>
+            <span class="status status--cancelled">Cancelled</span>
+          </div>
+
+          <div class="order-card__items">
+            <div class="order-item">
+              <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=120&q=80" alt="Sneakers" />
+              <div>
+                <p>Running Sneakers Air</p>
+                <span>Fashion Hub • Qty: 1</span>
+              </div>
+              <strong>$79.00</strong>
+            </div>
+          </div>
+
+          <div class="order-card__foot">
+            <div class="order-total">
+              <span>Total:</span>
+              <strong>$79.00</strong>
+            </div>
+            <div class="order-actions">
+              <a href="order-detail.html" class="btn btn--ghost btn--sm">View Details</a>
+              <button class="btn btn--primary btn--sm reorder-btn">Reorder</button>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- Empty state -->
+      <div class="orders-empty" id="ordersEmpty" hidden>
+        <div class="orders-empty__icon">📦</div>
+        <h2>No orders found</h2>
+        <p>We couldn't find any orders matching your current filter.</p>
+        <button class="btn btn--ghost" id="clearFilters">Clear filters</button>
+      </div>
+
+      <!-- Pagination -->
+      <nav class="pagination" id="ordersPagination">
+        <button class="page-btn" disabled aria-label="Previous">‹</button>
+        <button class="page-btn active">1</button>
+        <button class="page-btn">2</button>
+        <button class="page-btn">3</button>
+        <button class="page-btn" aria-label="Next">›</button>
+      </nav>
+
+    </section>
+  </main>
+
+  <!-- ================= FOOTER (simplified) ================= -->
+  <footer class="footer">
+    <div class="footer__bottom">
+      <p>© 2026 ShopHub. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/orders.js"></script>
+</body>
+</html>

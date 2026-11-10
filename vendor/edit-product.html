@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Edit Product — ShopHub Seller Center</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/css/global.css" />
+  <link rel="stylesheet" href="../assets/css/vendor-shared.css" />
+  <link rel="stylesheet" href="../assets/css/vendor-add-product.css" />
+</head>
+<body class="vendor-body">
+  <div class="vendor-layout">
+    <aside class="v-sidebar" id="vSidebar">
+      <div class="v-brand"><a href="../index.html" class="logo">Shop<span>Hub</span></a><span class="v-brand-badge">Seller</span></div>
+      <div class="v-shop-mini"><img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=80&q=80" alt="Shop" /><div><strong>TechZone</strong><span>Active Shop</span></div></div>
+      <nav class="v-nav">
+        <a href="dashboard.html" class="v-link"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="9" rx="1"/><rect x="14" y="3" width="7" height="5" rx="1"/><rect x="14" y="12" width="7" height="9" rx="1"/><rect x="3" y="16" width="7" height="5" rx="1"/></svg>Dashboard</a>
+        <a href="products.html" class="v-link active"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 7l-8-4-8 4 8 4 8-4z"/><path d="M4 7v10l8 4 8-4V7"/><path d="M12 11v10"/></svg>Products</a>
+        <a href="orders.html" class="v-link"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><path d="M3 6h18M16 10a4 4 0 0 1-8 0"/></svg>Orders<span class="v-badge">4</span></a>
+        <a href="earnings.html" class="v-link"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>Earnings</a>
+        <a href="reviews.html" class="v-link"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>Reviews</a>
+        <div class="v-divider"></div>
+        <div class="v-nav-label">Settings</div>
+        <a href="shop-settings.html" class="v-link"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>Shop Settings</a>
+        <div class="v-divider"></div>
+        <a href="login.html" class="v-link v-link--danger" id="vLogout"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>Logout</a>
+      </nav>
+    </aside>
+
+    <div class="v-main">
+      <header class="v-topbar">
+        <button class="v-menu-toggle" id="vMenuToggle"><span></span><span></span><span></span></button>
+        <div class="v-search"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg><input type="text" placeholder="Search..." /></div>
+        <div class="v-topbar-right">
+          <button class="v-icon-btn"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></svg><span class="v-dot"></span></button>
+          <a href="shop-settings.html" class="v-user"><img src="https://i.pravatar.cc/80?img=12" alt="User" /><strong>John Doe</strong></a>
+        </div>
+      </header>
+
+      <div class="v-content">
+        <div class="v-pagehead">
+          <div><h1>Edit Product</h1><p>Update details for "Wireless Headphones Pro"</p></div>
+          <a href="products.html" class="btn btn--ghost btn--sm">← Back to Products</a>
+        </div>
+
+        <div class="ap-layout">
+          <form class="ap-form" id="editProductForm">
+            <div class="v-card">
+              <div class="v-card-head"><h2>Basic Information</h2></div>
+              <div class="form-grid">
+                <div class="field field--full" id="f-name">
+                  <label>Product name *</label>
+                  <input type="text" id="ap-name" value="Wireless Headphones Pro" required />
+                  <span class="field__error"></span>
+                </div>
+                <div class="field" id="f-cat">
+                  <label>Category *</label>
+                  <select id="ap-cat" required>
+                    <option>Electronics</option>
+                    <option>Fashion</option>
+                    <option>Home & Living</option>
+                    <option>Beauty</option>
+                    <option>Books</option>
+                    <option>Sports</option>
+                  </select>
+                  <span class="field__error"></span>
+                </div>
+                <div class="field">
+                  <label>Brand</label>
+                  <input type="text" id="ap-brand" value="TechZone" />
+                </div>
+                <div class="field field--full" id="f-desc">
+                  <label>Description *</label>
+                  <textarea id="ap-desc" rows="4" required>Premium noise-cancelling wireless headphones with 40-hour battery life, deep bass, and ultra-comfortable memory foam ear cushions.</textarea>
+                  <span class="field__error"></span>
+                </div>
+              </div>
+            </div>
+
+            <div class="v-card">
+              <div class="v-card-head"><h2>Product Images</h2></div>
+              <label class="upload-area" for="ap-images">
+                <div class="upload-area__icon">📷</div>
+                <strong>Click to upload more images</strong>
+                <span>JPG, PNG · Max 5MB each · Up to 5 images</span>
+                <input type="file" id="ap-images" accept="image/*" multiple />
+              </label>
+              <div class="image-grid" id="imageGrid">
+                <div class="image-thumb">
+                  <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=200&q=80" alt="" />
+                  <button type="button">✕</button>
+                </div>
+                <div class="image-thumb">
+                  <img src="https://images.unsplash.com/photo-1484704849700-f032a568e944?w=200&q=80" alt="" />
+                  <button type="button">✕</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="v-card">
+              <div class="v-card-head"><h2>Pricing & Stock</h2></div>
+              <div class="form-grid">
+                <div class="field" id="f-price">
+                  <label>Price ($) *</label>
+                  <input type="number" id="ap-price" value="89.99" step="0.01" required />
+                  <span class="field__error"></span>
+                </div>
+                <div class="field">
+                  <label>Compare price ($)</label>
+                  <input type="number" id="ap-compare" value="129.99" step="0.01" />
+                </div>
+                <div class="field" id="f-stock">
+                  <label>Stock quantity *</label>
+                  <input type="number" id="ap-stock" value="45" required />
+                  <span class="field__error"></span>
+                </div>
+                <div class="field">
+                  <label>SKU</label>
+                  <input type="text" id="ap-sku" value="WH-001" />
+                </div>
+              </div>
+            </div>
+
+            <div class="v-card">
+              <div class="v-card-head">
+                <h2>Variants</h2>
+                <button type="button" class="btn btn--ghost btn--sm" id="addVariantBtn">+ Add Variant</button>
+              </div>
+              <div id="variantList" class="variant-list">
+                <div class="variant-row">
+                  <input type="text" value="Standard" placeholder="Size" />
+                  <input type="text" value="Black" placeholder="Color" />
+                  <input type="number" value="20" placeholder="Stock" />
+                  <button type="button" class="variant-remove">✕</button>
+                </div>
+                <div class="variant-row">
+                  <input type="text" value="Large" placeholder="Size" />
+                  <input type="text" value="Black" placeholder="Color" />
+                  <input type="number" value="25" placeholder="Stock" />
+                  <button type="button" class="variant-remove">✕</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="v-card">
+              <div class="v-card-head"><h2>SEO & Tags</h2></div>
+              <div class="form-grid">
+                <div class="field field--full">
+                  <label>Tags</label>
+                  <input type="text" id="ap-tags" value="headphones, wireless, bluetooth, noise-cancelling" />
+                </div>
+                <div class="field field--full">
+                  <label>Meta description</label>
+                  <textarea id="ap-meta" rows="2">Premium noise-cancelling wireless headphones with 40-hour battery.</textarea>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-actions" style="justify-content:space-between">
+              <button type="button" class="btn btn--ghost" id="deleteProductBtn" style="color:var(--danger);border-color:#FECACA">Delete Product</button>
+              <div style="display:flex;gap:10px">
+                <button type="button" class="btn btn--ghost" id="saveDraftBtn">Save as Draft</button>
+                <button type="submit" class="btn btn--primary" id="publishBtn">Update Product</button>
+              </div>
+            </div>
+          </form>
+
+          <aside class="ap-sidebar">
+            <div class="v-card">
+              <div class="v-card-head"><h2>Status</h2></div>
+              <div class="status-options">
+                <label class="status-opt">
+                  <input type="radio" name="pstatus" value="active" checked />
+                  <div><strong>Active</strong><span>Visible to customers</span></div>
+                </label>
+                <label class="status-opt">
+                  <input type="radio" name="pstatus" value="draft" />
+                  <div><strong>Draft</strong><span>Save for later</span></div>
+                </label>
+              </div>
+            </div>
+
+            <div class="v-card">
+              <div class="v-card-head"><h2>Product Stats</h2></div>
+              <div class="stats-mini">
+                <div><span>Views</span><strong>2,340</strong></div>
+                <div><span>Sold</span><strong>128</strong></div>
+                <div><span>Revenue</span><strong>$11,519</strong></div>
+                <div><span>Rating</span><strong>4.8 ★</strong></div>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="v-overlay" id="vOverlay"></div>
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/vendor-shared.js"></script>
+  <script src="../assets/js/vendor-add-product.js"></script>
+  <script>
+    // Edit-specific overrides
+    document.getElementById('editProductForm')?.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const btn = document.getElementById('publishBtn');
+      btn.textContent = 'Updating...';
+      btn.disabled = true;
+      setTimeout(() => {
+        showVToast('Product updated successfully');
+        setTimeout(() => window.location.href = 'products.html', 800);
+      }, 900);
+    });
+    document.getElementById('deleteProductBtn')?.addEventListener('click', () => {
+      if (confirm('Delete this product permanently?')) {
+        showVToast('Product deleted');
+        setTimeout(() => window.location.href = 'products.html', 700);
+      }
+    });
+    // Handle pre-existing image remove
+    document.querySelectorAll('.image-thumb button').forEach(b => {
+      b.addEventListener('click', () => b.parentElement.remove());
+    });
+  </script>
+</body>
+</html>

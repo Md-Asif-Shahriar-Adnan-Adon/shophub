@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Account — ShopHub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/css/global.css" />
+  <link rel="stylesheet" href="../assets/css/account.css" />
+</head>
+<body>
+
+  <!-- ================= HEADER ================= -->
+  <header class="header">
+    <div class="container header__inner">
+      <a href="../index.html" class="logo">Shop<span>Hub</span></a>
+      <div class="search">
+        <input type="text" placeholder="Search products, brands, vendors..." />
+        <button class="search__btn" aria-label="Search">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/>
+          </svg>
+        </button>
+      </div>
+      <nav class="header__actions">
+        <a href="wishlist.html" class="icon-btn" aria-label="Wishlist">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"/>
+          </svg>
+        </a>
+        <a href="cart.html" class="icon-btn" aria-label="Cart">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/>
+            <path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"/>
+          </svg>
+          <span class="badge">3</span>
+        </a>
+        <a href="account.html" class="icon-btn active" aria-label="Account">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="8" r="4"/><path d="M4 21v-2a6 6 0 0 1 6-6h4a6 6 0 0 1 6 6v2"/>
+          </svg>
+        </a>
+      </nav>
+      <button class="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ================= ACCOUNT LAYOUT ================= -->
+  <main class="container account-layout">
+
+    <!-- ========== SIDEBAR ========== -->
+    <aside class="account-sidebar" id="accountSidebar">
+
+      <!-- Profile mini -->
+      <div class="sidebar-profile">
+        <img src="https://i.pravatar.cc/120?img=12" alt="John Doe" class="sidebar-profile__avatar" />
+        <div>
+          <strong>John Doe</strong>
+          <p>john.doe@example.com</p>
+        </div>
+      </div>
+
+      <!-- Nav -->
+      <nav class="sidebar-nav">
+        <a href="account.html" class="sidebar-link active">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/>
+            <rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/>
+          </svg>
+          Dashboard
+        </a>
+        <a href="orders.html" class="sidebar-link">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+            <path d="M3 6h18M16 10a4 4 0 0 1-8 0"/>
+          </svg>
+          My Orders
+          <span class="sidebar-badge">2</span>
+        </a>
+        <a href="wishlist.html" class="sidebar-link">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"/>
+          </svg>
+          Wishlist
+        </a>
+        <a href="addresses.html" class="sidebar-link">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+            <circle cx="12" cy="10" r="3"/>
+          </svg>
+          Addresses
+        </a>
+        <a href="profile-settings.html" class="sidebar-link">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="3"/>
+            <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+          </svg>
+          Settings
+        </a>
+        <div class="sidebar-divider"></div>
+        <a href="../index.html" class="sidebar-link sidebar-link--danger" id="logoutBtn">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/>
+            <polyline points="16 17 21 12 16 7"/>
+            <line x1="21" y1="12" x2="9" y2="12"/>
+          </svg>
+          Logout
+        </a>
+      </nav>
+    </aside>
+
+    <!-- ========== MAIN CONTENT ========== -->
+    <section class="account-main">
+
+      <!-- Welcome -->
+      <div class="welcome">
+        <div>
+          <h1>Hi, John 👋</h1>
+          <p>Welcome back! Here's what's happening with your account.</p>
+        </div>
+        <a href="shop.html" class="btn btn--primary btn--sm">Continue Shopping</a>
+      </div>
+
+      <!-- Quick stats -->
+      <div class="stats">
+        <a href="orders.html" class="stat-card">
+          <div class="stat-icon stat-icon--indigo">📦</div>
+          <div>
+            <span class="stat-label">Total Orders</span>
+            <strong class="stat-value">12</strong>
+          </div>
+        </a>
+        <a href="wishlist.html" class="stat-card">
+          <div class="stat-icon stat-icon--pink">❤️</div>
+          <div>
+            <span class="stat-label">Wishlist Items</span>
+            <strong class="stat-value">8</strong>
+          </div>
+        </a>
+        <a href="addresses.html" class="stat-card">
+          <div class="stat-icon stat-icon--amber">📍</div>
+          <div>
+            <span class="stat-label">Saved Addresses</span>
+            <strong class="stat-value">2</strong>
+          </div>
+        </a>
+        <a href="#" class="stat-card">
+          <div class="stat-icon stat-icon--green">⭐</div>
+          <div>
+            <span class="stat-label">Reviews</span>
+            <strong class="stat-value">5</strong>
+          </div>
+        </a>
+      </div>
+
+      <!-- Recent orders -->
+      <div class="panel">
+        <div class="panel__head">
+          <h2>Recent Orders</h2>
+          <a href="orders.html" class="link">View all →</a>
+        </div>
+
+        <div class="recent-orders">
+          <!-- Order 1 -->
+          <div class="order-row">
+            <div class="order-row__left">
+              <div class="order-row__thumb">
+                <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=120&q=80" alt="Headphones" />
+              </div>
+              <div>
+                <p class="order-row__id">#SH-2026-48392</p>
+                <p class="order-row__date">Placed Nov 3, 2026</p>
+                <p class="order-row__items">3 items • $298.19</p>
+              </div>
+            </div>
+            <div class="order-row__right">
+              <span class="status status--shipped">Shipped</span>
+              <a href="order-detail.html" class="btn btn--ghost btn--sm">Track</a>
+            </div>
+          </div>
+
+          <!-- Order 2 -->
+          <div class="order-row">
+            <div class="order-row__left">
+              <div class="order-row__thumb">
+                <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=120&q=80" alt="Watch" />
+              </div>
+              <div>
+                <p class="order-row__id">#SH-2026-48214</p>
+                <p class="order-row__date">Placed Oct 28, 2026</p>
+                <p class="order-row__items">1 item • $149.00</p>
+              </div>
+            </div>
+            <div class="order-row__right">
+              <span class="status status--delivered">Delivered</span>
+              <a href="order-detail.html" class="btn btn--ghost btn--sm">View</a>
+            </div>
+          </div>
+
+          <!-- Order 3 -->
+          <div class="order-row">
+            <div class="order-row__left">
+              <div class="order-row__thumb">
+                <img src="https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=120&q=80" alt="Sunglasses" />
+              </div>
+              <div>
+                <p class="order-row__id">#SH-2026-48102</p>
+                <p class="order-row__date">Placed Oct 22, 2026</p>
+                <p class="order-row__items">2 items • $94.00</p>
+              </div>
+            </div>
+            <div class="order-row__right">
+              <span class="status status--delivered">Delivered</span>
+              <a href="order-detail.html" class="btn btn--ghost btn--sm">View</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Profile card + quick links -->
+      <div class="two-col">
+
+        <!-- Profile info -->
+        <div class="panel">
+          <div class="panel__head">
+            <h2>Profile Info</h2>
+            <a href="profile-settings.html" class="link">Edit →</a>
+          </div>
+
+          <div class="profile-info">
+            <div class="profile-info__row">
+              <span>Full name</span>
+              <strong>John Doe</strong>
+            </div>
+            <div class="profile-info__row">
+              <span>Email</span>
+              <strong>john.doe@example.com</strong>
+            </div>
+            <div class="profile-info__row">
+              <span>Phone</span>
+              <strong>+880 1712 345678</strong>
+            </div>
+            <div class="profile-info__row">
+              <span>Member since</span>
+              <strong>Jan 2025</strong>
+            </div>
+          </div>
+        </div>
+
+        <!-- Default address -->
+        <div class="panel">
+          <div class="panel__head">
+            <h2>Default Address</h2>
+            <a href="addresses.html" class="link">Manage →</a>
+          </div>
+
+          <div class="address-mini">
+            <div class="address-mini__icon">📍</div>
+            <div>
+              <strong>John Doe</strong>
+              <p>House 12, Road 5, Dhanmondi</p>
+              <p>Dhaka, 1207, Bangladesh</p>
+              <p>+880 1712 345678</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+  </main>
+
+  <!-- ================= FOOTER (simplified) ================= -->
+  <footer class="footer">
+    <div class="footer__bottom">
+      <p>© 2026 ShopHub. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/account.js"></script>
+</body>
+</html>

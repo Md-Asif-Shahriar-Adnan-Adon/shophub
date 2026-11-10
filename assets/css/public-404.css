@@ -1,0 +1,107 @@
+.notfound {
+  min-height: calc(100vh - 72px - 60px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #EEF2FF 0%, #FAF5FF 100%);
+}
+.notfound__wrap {
+  max-width: 720px;
+  text-align: center;
+}
+.notfound__code {
+  font-family: var(--font-head);
+  font-size: 140px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -4px;
+  color: var(--primary);
+  margin-bottom: 8px;
+  text-shadow: 0 8px 24px rgba(79,70,229,.15);
+}
+.notfound__code span {
+  color: var(--secondary);
+  display: inline-block;
+  animation: bounce 2s infinite;
+}
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+.notfound__illustration {
+  margin: 8px 0 12px;
+  font-size: 60px;
+}
+.ghost { display: inline-block; animation: float 3s ease-in-out infinite; }
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(-4deg); }
+  50% { transform: translateY(-10px) rotate(4deg); }
+}
+
+.notfound h1 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+.notfound__sub {
+  font-size: 15px;
+  color: var(--text-muted);
+  line-height: 1.6;
+  max-width: 500px;
+  margin: 0 auto 28px;
+}
+
+.notfound__actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 48px;
+}
+
+.notfound__help {
+  background: #fff;
+  border-radius: var(--radius);
+  padding: 24px;
+  border: 1px solid var(--border);
+}
+.notfound__help h3 {
+  font-size: 15px;
+  margin-bottom: 16px;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+.help-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+.help-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 16px 8px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  transition: all .2s;
+  text-align: center;
+}
+.help-card:hover {
+  border-color: var(--primary);
+  background: #FAFAFF;
+  transform: translateY(-2px);
+}
+.help-card span { font-size: 24px; margin-bottom: 4px; }
+.help-card strong { font-size: 13px; color: var(--text); }
+.help-card p { font-size: 11px; color: var(--text-muted); }
+
+.footer { margin-top: 0; padding-top: 0; }
+
+@media (max-width: 640px) {
+  .notfound__code { font-size: 100px; }
+  .notfound h1 { font-size: 22px; }
+  .help-grid { grid-template-columns: 1fr 1fr; }
+  .notfound__actions { flex-direction: column; }
+  .notfound__actions .btn { width: 100%; }
+}

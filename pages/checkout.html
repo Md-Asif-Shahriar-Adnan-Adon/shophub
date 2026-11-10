@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Checkout — ShopHub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/css/global.css" />
+  <link rel="stylesheet" href="../assets/css/checkout.css" />
+</head>
+<body>
+
+  <!-- ================= HEADER (simplified) ================= -->
+  <header class="header">
+    <div class="container header__inner">
+      <a href="../index.html" class="logo">Shop<span>Hub</span></a>
+      <div class="checkout-secure">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+          <rect x="3" y="11" width="18" height="11" rx="2"/>
+          <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+        </svg>
+        Secure Checkout
+      </div>
+      <nav class="header__actions">
+        <a href="cart.html" class="icon-btn" aria-label="Cart">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/>
+            <path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"/>
+          </svg>
+          <span class="badge">3</span>
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ================= CHECKOUT ================= -->
+  <main class="container checkout-page">
+
+    <div class="page-head">
+      <h1>Checkout</h1>
+      <a href="cart.html" class="link">← Back to cart</a>
+    </div>
+
+    <!-- ========== STEPPER ========== -->
+    <div class="stepper" id="stepper">
+      <div class="step active" data-step="1">
+        <div class="step__circle">1</div>
+        <div class="step__label">Address</div>
+      </div>
+      <div class="step__line"></div>
+      <div class="step" data-step="2">
+        <div class="step__circle">2</div>
+        <div class="step__label">Shipping</div>
+      </div>
+      <div class="step__line"></div>
+      <div class="step" data-step="3">
+        <div class="step__circle">3</div>
+        <div class="step__label">Payment</div>
+      </div>
+    </div>
+
+    <div class="checkout-layout">
+
+      <!-- ========== LEFT: Steps content ========== -->
+      <section class="checkout-content">
+
+        <!-- ========== STEP 1: ADDRESS ========== -->
+        <div class="step-panel active" id="panel-1">
+          <div class="panel-card">
+            <h2>Shipping Address</h2>
+            <p class="muted">Where should we deliver your order?</p>
+
+            <form id="addressForm" novalidate>
+              <div class="form-grid">
+                <div class="field" id="f-fullname">
+                  <label for="fullname">Full name *</label>
+                  <input id="fullname" type="text" placeholder="John Doe" required />
+                  <span class="field__error"></span>
+                </div>
+
+                <div class="field" id="f-phone">
+                  <label for="phone">Phone number *</label>
+                  <input id="phone" type="tel" placeholder="+880 1XXX XXXXXX" required />
+                  <span class="field__error"></span>
+                </div>
+
+                <div class="field field--full" id="f-email">
+                  <label for="email">Email *</label>
+                  <input id="email" type="email" placeholder="you@example.com" required />
+                  <span class="field__error"></span>
+                </div>
+
+                <div class="field field--full" id="f-address">
+                  <label for="address">Street address *</label>
+                  <input id="address" type="text" placeholder="House #, Road #, Area" required />
+                  <span class="field__error"></span>
+                </div>
+
+                <div class="field" id="f-city">
+                  <label for="city">City *</label>
+                  <input id="city" type="text" placeholder="Dhaka" required />
+                  <span class="field__error"></span>
+                </div>
+
+                <div class="field" id="f-postal">
+                  <label for="postal">Postal code *</label>
+                  <input id="postal" type="text" placeholder="1207" required />
+                  <span class="field__error"></span>
+                </div>
+
+                <div class="field field--full">
+                  <label for="notes">Order notes (optional)</label>
+                  <textarea id="notes" rows="2" placeholder="Special delivery instructions..."></textarea>
+                </div>
+              </div>
+
+              <label class="check">
+                <input type="checkbox" id="saveAddress" /> <span>Save this address for next time</span>
+              </label>
+
+              <div class="panel-actions">
+                <a href="cart.html" class="btn btn--ghost">← Back to Cart</a>
+                <button type="submit" class="btn btn--primary btn--lg">Continue to Shipping →</button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- ========== STEP 2: SHIPPING ========== -->
+        <div class="step-panel" id="panel-2">
+          <div class="panel-card">
+            <h2>Shipping Method</h2>
+            <p class="muted">Choose how fast you'd like your delivery.</p>
+
+            <div class="shipping-options">
+              <label class="ship-option">
+                <input type="radio" name="shipping" value="standard" data-price="0" checked />
+                <div class="ship-option__body">
+                  <div>
+                    <strong>Standard Delivery</strong>
+                    <p>3–5 business days</p>
+                  </div>
+                  <span class="ship-option__price">Free</span>
+                </div>
+              </label>
+
+              <label class="ship-option">
+                <input type="radio" name="shipping" value="express" data-price="9.99" />
+                <div class="ship-option__body">
+                  <div>
+                    <strong>Express Delivery</strong>
+                    <p>1–2 business days</p>
+                  </div>
+                  <span class="ship-option__price">$9.99</span>
+                </div>
+              </label>
+
+              <label class="ship-option">
+                <input type="radio" name="shipping" value="sameday" data-price="19.99" />
+                <div class="ship-option__body">
+                  <div>
+                    <strong>Same-Day Delivery</strong>
+                    <p>Within Dhaka, order before 12 PM</p>
+                  </div>
+                  <span class="ship-option__price">$19.99</span>
+                </div>
+              </label>
+            </div>
+
+            <div class="panel-actions">
+              <button class="btn btn--ghost" data-goto="1">← Back</button>
+              <button class="btn btn--primary btn--lg" data-goto="3">Continue to Payment →</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- ========== STEP 3: PAYMENT ========== -->
+        <div class="step-panel" id="panel-3">
+          <div class="panel-card">
+            <h2>Payment Method</h2>
+            <p class="muted">All transactions are secure and encrypted.</p>
+
+            <div class="payment-options">
+              <!-- Card -->
+              <label class="pay-option">
+                <input type="radio" name="payment" value="card" checked />
+                <div class="pay-option__body">
+                  <div class="pay-option__head">
+                    <strong>💳 Credit / Debit Card</strong>
+                  </div>
+                  <div class="pay-option__fields" id="cardFields">
+                    <div class="field" id="f-cardnum">
+                      <label>Card number</label>
+                      <input type="text" id="cardnum" placeholder="1234 5678 9012 3456" maxlength="19" />
+                      <span class="field__error"></span>
+                    </div>
+                    <div class="field" id="f-cardname">
+                      <label>Name on card</label>
+                      <input type="text" id="cardname" placeholder="JOHN DOE" />
+                      <span class="field__error"></span>
+                    </div>
+                    <div class="card-row">
+                      <div class="field" id="f-expiry">
+                        <label>Expiry</label>
+                        <input type="text" id="expiry" placeholder="MM/YY" maxlength="5" />
+                        <span class="field__error"></span>
+                      </div>
+                      <div class="field" id="f-cvv">
+                        <label>CVV</label>
+                        <input type="text" id="cvv" placeholder="123" maxlength="4" />
+                        <span class="field__error"></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </label>
+
+              <!-- bKash -->
+              <label class="pay-option">
+                <input type="radio" name="payment" value="bkash" />
+                <div class="pay-option__body">
+                  <div class="pay-option__head">
+                    <strong>📱 bKash</strong>
+                  </div>
+                  <p class="pay-option__desc">Pay with your bKash mobile wallet</p>
+                </div>
+              </label>
+
+              <!-- Nagad -->
+              <label class="pay-option">
+                <input type="radio" name="payment" value="nagad" />
+                <div class="pay-option__body">
+                  <div class="pay-option__head">
+                    <strong>📱 Nagad</strong>
+                  </div>
+                  <p class="pay-option__desc">Pay with your Nagad mobile wallet</p>
+                </div>
+              </label>
+
+              <!-- COD -->
+              <label class="pay-option">
+                <input type="radio" name="payment" value="cod" />
+                <div class="pay-option__body">
+                  <div class="pay-option__head">
+                    <strong>💵 Cash on Delivery</strong>
+                  </div>
+                  <p class="pay-option__desc">Pay when you receive your order</p>
+                </div>
+              </label>
+            </div>
+
+            <div class="panel-actions">
+              <button class="btn btn--ghost" data-goto="2">← Back</button>
+              <button class="btn btn--primary btn--lg" id="placeOrderBtn">Place Order</button>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- ========== RIGHT: Order Summary ========== -->
+      <aside class="summary">
+        <div class="summary__card">
+          <h3>Order Summary</h3>
+
+          <!-- Items preview -->
+          <div class="summary-items">
+            <div class="summary-item">
+              <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=100&q=80" alt="Headphones" />
+              <div>
+                <p>Wireless Headphones Pro</p>
+                <span>Qty: 1</span>
+              </div>
+              <strong>$89.99</strong>
+            </div>
+            <div class="summary-item">
+              <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=100&q=80" alt="Watch" />
+              <div>
+                <p>Smart Watch Series 5</p>
+                <span>Qty: 1</span>
+              </div>
+              <strong>$149.00</strong>
+            </div>
+            <div class="summary-item">
+              <img src="https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=100&q=80" alt="Sunglasses" />
+              <div>
+                <p>Classic Aviator Sunglasses</p>
+                <span>Qty: 1</span>
+              </div>
+              <strong>$45.00</strong>
+            </div>
+          </div>
+
+          <div class="summary__divider"></div>
+
+          <div class="summary__row">
+            <span>Subtotal</span>
+            <strong id="subtotal">$283.99</strong>
+          </div>
+          <div class="summary__row">
+            <span>Shipping</span>
+            <strong id="shipping">$0.00</strong>
+          </div>
+          <div class="summary__row">
+            <span>Tax (5%)</span>
+            <strong id="tax">$14.20</strong>
+          </div>
+
+          <div class="summary__divider"></div>
+
+          <div class="summary__row summary__row--total">
+            <span>Total</span>
+            <strong id="total">$298.19</strong>
+          </div>
+
+          <div class="summary__trust">
+            <span>🔒 SSL secured</span>
+            <span>•</span>
+            <span>↩️ 7-day returns</span>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/checkout.js"></script>
+</body>
+</html>

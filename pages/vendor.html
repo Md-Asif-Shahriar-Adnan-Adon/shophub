@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TechZone Store — ShopHub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/css/global.css" />
+  <link rel="stylesheet" href="../assets/css/vendor.css" />
+</head>
+<body>
+
+  <!-- ================= HEADER ================= -->
+  <header class="header">
+    <div class="container header__inner">
+      <a href="../index.html" class="logo">Shop<span>Hub</span></a>
+      <div class="search">
+        <input type="text" placeholder="Search products, brands, vendors..." />
+        <button class="search__btn" aria-label="Search">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/>
+          </svg>
+        </button>
+      </div>
+      <nav class="header__actions">
+        <a href="wishlist.html" class="icon-btn" aria-label="Wishlist">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"/>
+          </svg>
+        </a>
+        <a href="cart.html" class="icon-btn" aria-label="Cart">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/>
+            <path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"/>
+          </svg>
+          <span class="badge">3</span>
+        </a>
+        <a href="account.html" class="icon-btn" aria-label="Account">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="8" r="4"/><path d="M4 21v-2a6 6 0 0 1 6-6h4a6 6 0 0 1 6 6v2"/>
+          </svg>
+        </a>
+      </nav>
+      <button class="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ================= BREADCRUMB ================= -->
+  <div class="breadcrumb-bar">
+    <div class="container">
+      <nav class="breadcrumb">
+        <a href="../index.html">Home</a> <span>/</span>
+        <a href="shop.html">Vendors</a> <span>/</span>
+        <strong>TechZone</strong>
+      </nav>
+    </div>
+  </div>
+
+  <!-- ================= SHOP HERO ================= -->
+  <section class="shop-hero">
+    <div class="shop-cover">
+      <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=1200&q=80" alt="Shop cover" />
+    </div>
+
+    <div class="container shop-hero__body">
+      <div class="shop-logo">
+        <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=200&q=80" alt="TechZone logo" />
+      </div>
+
+      <div class="shop-info">
+        <div class="shop-title-row">
+          <h1>TechZone</h1>
+          <span class="verified-badge">
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor">
+              <path d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+            </svg>
+            Verified
+          </span>
+        </div>
+
+        <p class="shop-tagline">Premium electronics & gadgets — trusted by 50,000+ customers.</p>
+
+        <div class="shop-meta-row">
+          <span class="shop-rating">
+            <span class="stars">★★★★★</span> 4.8 (1,248 reviews)
+          </span>
+          <span>•</span>
+          <span>📍 Dhaka, Bangladesh</span>
+          <span>•</span>
+          <span>🕐 Since 2019</span>
+        </div>
+      </div>
+
+      <div class="shop-actions">
+        <button class="btn btn--primary" id="followBtn">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+            <circle cx="9" cy="7" r="4"/>
+            <line x1="19" y1="8" x2="19" y2="14"/>
+            <line x1="22" y1="11" x2="16" y2="11"/>
+          </svg>
+          Follow
+        </button>
+        <button class="btn btn--ghost" id="contactBtn">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+          </svg>
+          Contact
+        </button>
+      </div>
+    </div>
+
+    <!-- Stats bar -->
+    <div class="shop-stats">
+      <div class="container shop-stats__inner">
+        <div class="stat">
+          <strong>248</strong>
+          <span>Products</span>
+        </div>
+        <div class="stat">
+          <strong>50.2K</strong>
+          <span>Followers</span>
+        </div>
+        <div class="stat">
+          <strong>4.8 ★</strong>
+          <span>Avg Rating</span>
+        </div>
+        <div class="stat">
+          <strong>&lt; 2h</strong>
+          <span>Response Time</span>
+        </div>
+        <div class="stat">
+          <strong>99%</strong>
+          <span>Positive Feedback</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= TABS ================= -->
+  <div class="vendor-tabs-bar">
+    <div class="container">
+      <nav class="vendor-tabs">
+        <button class="vtab active" data-tab="products">Products <span>248</span></button>
+        <button class="vtab" data-tab="about">About</button>
+        <button class="vtab" data-tab="reviews">Reviews <span>1,248</span></button>
+        <button class="vtab" data-tab="policies">Policies</button>
+      </nav>
+    </div>
+  </div>
+
+  <!-- ================= TAB CONTENT ================= -->
+  <main class="container vendor-content">
+
+    <!-- ========== TAB: PRODUCTS ========== -->
+    <div class="vpanel active" id="vpanel-products">
+
+      <!-- Filter strip -->
+      <div class="filter-strip">
+        <div class="filter-chips">
+          <button class="fchip active">All</button>
+          <button class="fchip">Smartphones</button>
+          <button class="fchip">Laptops</button>
+          <button class="fchip">Audio</button>
+          <button class="fchip">Wearables</button>
+          <button class="fchip">Cameras</button>
+        </div>
+        <select class="sort-select">
+          <option>Featured</option>
+          <option>Price: Low to High</option>
+          <option>Price: High to Low</option>
+          <option>Newest</option>
+          <option>Best Rating</option>
+        </select>
+      </div>
+
+      <!-- Product grid -->
+      <div class="products">
+
+        <article class="product-card">
+          <div class="product-card__img">
+            <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400&q=80" alt="Headphones" />
+            <span class="tag tag--sale">-30%</span>
+            <button class="wish" aria-label="Wishlist">♡</button>
+          </div>
+          <div class="product-card__body">
+            <h3>Wireless Headphones Pro</h3>
+            <div class="rating">★★★★★ <span>(128)</span></div>
+            <div class="price">
+              <span class="price__now">$89.99</span>
+              <span class="price__old">$129.99</span>
+            </div>
+            <button class="btn btn--primary btn--block">Add to Cart</button>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-card__img">
+            <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=400&q=80" alt="MacBook" />
+            <span class="tag tag--sale">-15%</span>
+            <button class="wish" aria-label="Wishlist">♡</button>
+          </div>
+          <div class="product-card__body">
+            <h3>MacBook Air M2 13"</h3>
+            <div class="rating">★★★★★ <span>(320)</span></div>
+            <div class="price">
+              <span class="price__now">$999.00</span>
+              <span class="price__old">$1199.00</span>
+            </div>
+            <button class="btn btn--primary btn--block">Add to Cart</button>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-card__img">
+            <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=400&q=80" alt="iPhone" />
+            <span class="tag tag--new">New</span>
+            <button class="wish" aria-label="Wishlist">♡</button>
+          </div>
+          <div class="product-card__body">
+            <h3>iPhone 15 Pro Max</h3>
+            <div class="rating">★★★★★ <span>(412)</span></div>
+            <div class="price"><span class="price__now">$1,099.00</span></div>
+            <button class="btn btn--primary btn--block">Add to Cart</button>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-card__img">
+            <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=400&q=80" alt="Watch" />
+            <button class="wish" aria-label="Wishlist">♡</button>
+          </div>
+          <div class="product-card__body">
+            <h3>Smart Watch Series 5</h3>
+            <div class="rating">★★★★☆ <span>(86)</span></div>
+            <div class="price"><span class="price__now">$149.00</span></div>
+            <button class="btn btn--primary btn--block">Add to Cart</button>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-card__img">
+            <img src="https://images.unsplash.com/photo-1524805444758-089113d48a6d?w=400&q=80" alt="Keyboard" />
+            <button class="wish" aria-label="Wishlist">♡</button>
+          </div>
+          <div class="product-card__body">
+            <h3>Mechanical Keyboard RGB</h3>
+            <div class="rating">★★★★☆ <span>(150)</span></div>
+            <div class="price"><span class="price__now">$89.00</span></div>
+            <button class="btn btn--primary btn--block">Add to Cart</button>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-card__img">
+            <img src="https://images.unsplash.com/photo-1583394838336-acd977736f90?w=400&q=80" alt="Headphones" />
+            <button class="wish" aria-label="Wishlist">♡</button>
+          </div>
+          <div class="product-card__body">
+            <h3>Studio Headphones X1</h3>
+            <div class="rating">★★★★☆ <span>(91)</span></div>
+            <div class="price"><span class="price__now">$179.00</span></div>
+            <button class="btn btn--primary btn--block">Add to Cart</button>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="view-more-wrap">
+        <a href="shop.html" class="btn btn--ghost">View all 248 products →</a>
+      </div>
+    </div>
+
+    <!-- ========== TAB: ABOUT ========== -->
+    <div class="vpanel" id="vpanel-about">
+      <div class="about-grid">
+        <div class="about-content">
+          <h2>About TechZone</h2>
+          <p>
+            TechZone is a leading electronics retailer based in Dhaka, Bangladesh.
+            Since 2019, we've been bringing the latest gadgets and tech products to
+            thousands of customers across the country.
+          </p>
+          <p>
+            We specialize in premium electronics — from the latest smartphones and
+            laptops to audio equipment, wearables, and accessories. Every product we
+            sell is 100% authentic with full manufacturer warranty.
+          </p>
+
+          <h3>Why shop with us?</h3>
+          <ul class="about-list">
+            <li>✅ 100% authentic products with warranty</li>
+            <li>✅ Fast delivery within 24–48 hours in Dhaka</li>
+            <li>✅ 7-day easy returns</li>
+            <li>✅ 24/7 customer support</li>
+            <li>✅ Expert tech advice</li>
+          </ul>
+        </div>
+
+        <aside class="about-side">
+          <div class="info-block">
+            <h4>Store Info</h4>
+            <div class="info-row"><span>Joined</span><strong>Jan 2019</strong></div>
+            <div class="info-row"><span>Location</span><strong>Dhaka, Bangladesh</strong></div>
+            <div class="info-row"><span>Response Time</span><strong>&lt; 2 hours</strong></div>
+            <div class="info-row"><span>Products</span><strong>248</strong></div>
+            <div class="info-row"><span>Categories</span><strong>6</strong></div>
+          </div>
+
+          <div class="info-block">
+            <h4>Contact</h4>
+            <div class="info-row"><span>📞</span><strong>+880 1712 345678</strong></div>
+            <div class="info-row"><span>✉️</span><strong>hello@techzone.com</strong></div>
+            <button class="btn btn--primary btn--block btn--sm" id="aboutContactBtn">Contact Vendor</button>
+          </div>
+        </aside>
+      </div>
+    </div>
+
+    <!-- ========== TAB: REVIEWS ========== -->
+    <div class="vpanel" id="vpanel-reviews">
+
+      <!-- Summary -->
+      <div class="reviews-summary">
+        <div class="rs-score">
+          <span class="rs-big">4.8</span>
+          <div class="stars">★★★★★</div>
+          <p>1,248 reviews</p>
+        </div>
+        <div class="rs-bars">
+          <div class="bar-row"><span>5 ★</span><div class="bar"><i style="width:82%"></i></div><em>82%</em></div>
+          <div class="bar-row"><span>4 ★</span><div class="bar"><i style="width:12%"></i></div><em>12%</em></div>
+          <div class="bar-row"><span>3 ★</span><div class="bar"><i style="width:4%"></i></div><em>4%</em></div>
+          <div class="bar-row"><span>2 ★</span><div class="bar"><i style="width:1%"></i></div><em>1%</em></div>
+          <div class="bar-row"><span>1 ★</span><div class="bar"><i style="width:1%"></i></div><em>1%</em></div>
+        </div>
+      </div>
+
+      <!-- Filters -->
+      <div class="review-filters">
+        <button class="rf active">All Reviews</button>
+        <button class="rf">With Photos</button>
+        <button class="rf">5 ★</button>
+        <button class="rf">4 ★</button>
+        <button class="rf">Recent</button>
+      </div>
+
+      <!-- Review list -->
+      <div class="vendor-reviews">
+
+        <article class="vreview">
+          <img src="https://i.pravatar.cc/80?img=12" alt="User" class="vreview__avatar" />
+          <div class="vreview__body">
+            <div class="vreview__head">
+              <strong>Alex Johnson</strong>
+              <span class="stars small">★★★★★</span>
+              <em>2 weeks ago</em>
+            </div>
+            <p>Fast delivery and authentic product. TechZone is my go-to store for electronics. Highly recommend!</p>
+            <div class="vreview__foot">
+              <span>👍 24 helpful</span>
+              <button class="link-sm">Reply</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="vreview">
+          <img src="https://i.pravatar.cc/80?img=32" alt="User" class="vreview__avatar" />
+          <div class="vreview__body">
+            <div class="vreview__head">
+              <strong>Maria Chen</strong>
+              <span class="stars small">★★★★★</span>
+              <em>1 month ago</em>
+            </div>
+            <p>Great customer service! I had a query about warranty and they replied within an hour. Very professional.</p>
+            <div class="vreview__foot">
+              <span>👍 18 helpful</span>
+              <button class="link-sm">Reply</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="vreview">
+          <img src="https://i.pravatar.cc/80?img=45" alt="User" class="vreview__avatar" />
+          <div class="vreview__body">
+            <div class="vreview__head">
+              <strong>Sam Rahman</strong>
+              <span class="stars small">★★★★☆</span>
+              <em>1 month ago</em>
+            </div>
+            <p>Product quality is great. Delivery took a day longer than expected but overall a good experience.</p>
+            <div class="vreview__foot">
+              <span>👍 9 helpful</span>
+              <button class="link-sm">Reply</button>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="view-more-wrap">
+        <button class="btn btn--ghost">Load more reviews</button>
+      </div>
+    </div>
+
+    <!-- ========== TAB: POLICIES ========== -->
+    <div class="vpanel" id="vpanel-policies">
+      <div class="policies-grid">
+
+        <div class="policy-card">
+          <div class="policy-icon">📦</div>
+          <h3>Shipping Policy</h3>
+          <p>Standard delivery within Dhaka takes 24–48 hours. Outside Dhaka takes 3–5 business days. Free shipping on orders over $50.</p>
+        </div>
+
+        <div class="policy-card">
+          <div class="policy-icon">↩️</div>
+          <h3>Return Policy</h3>
+          <p>7-day easy return policy. Items must be unused and in original packaging. Return shipping is free for defective products.</p>
+        </div>
+
+        <div class="policy-card">
+          <div class="policy-icon">🛡️</div>
+          <h3>Warranty</h3>
+          <p>All products come with full manufacturer warranty. Warranty claims are handled directly by TechZone for your convenience.</p>
+        </div>
+
+        <div class="policy-card">
+          <div class="policy-icon">🔒</div>
+          <h3>Privacy</h3>
+          <p>Your personal information is safe. We never share your data with third parties and use industry-standard encryption.</p>
+        </div>
+
+      </div>
+    </div>
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__col">
+        <a href="../index.html" class="logo">Shop<span>Hub</span></a>
+        <p>Your trusted multi-vendor marketplace for everything you need.</p>
+      </div>
+      <div class="footer__col">
+        <h4>Shop</h4>
+        <a href="shop.html">All Products</a><a href="category.html">Categories</a><a href="vendor.html">Vendors</a><a href="#">Deals</a>
+      </div>
+      <div class="footer__col">
+        <h4>Support</h4>
+        <a href="#">Help Center</a><a href="../public/contact.html">Contact Us</a><a href="#">Returns</a><a href="#">FAQ</a>
+      </div>
+      <div class="footer__col">
+        <h4>Company</h4>
+        <a href="../public/about.html">About Us</a><a href="../public/privacy-terms.html">Privacy</a><a href="../public/privacy-terms.html">Terms</a><a href="#">Careers</a>
+      </div>
+      <div class="footer__col">
+        <h4>Newsletter</h4>
+        <p>Get the latest deals in your inbox.</p>
+        <form class="newsletter">
+          <input type="email" placeholder="Your email" required />
+          <button class="btn btn--primary btn--sm">Subscribe</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>© 2026 ShopHub. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/vendor.js"></script>
+</body>
+</html>

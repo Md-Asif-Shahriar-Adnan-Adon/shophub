@@ -1,0 +1,79 @@
+.vd-hero {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+.vd-logo {
+  width: 90px; height: 90px;
+  border-radius: var(--radius-sm);
+  object-fit: cover;
+  flex-shrink: 0;
+}
+.vd-info { flex: 1; min-width: 220px; }
+.vd-title { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-bottom: 4px; }
+.vd-title h2 { font-size: 20px; }
+.vd-sub { font-size: 13px; color: var(--text-muted); margin-bottom: 8px; line-height: 1.5; }
+.vd-meta { display: flex; flex-wrap: wrap; gap: 14px; font-size: 12px; color: var(--text-muted); }
+.vd-stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  min-width: 200px;
+  padding-left: 20px;
+  border-left: 1px solid var(--border);
+}
+.vd-stats > div { text-align: right; }
+.vd-stats strong { font-size: 18px; font-family: var(--font-head); font-weight: 700; display: block; }
+.vd-stats span { font-size: 11px; color: var(--text-muted); }
+
+/* Tabs */
+.vd-tabs {
+  display: flex;
+  gap: 4px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 20px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.vd-tabs::-webkit-scrollbar { display: none; }
+.vd-tab {
+  padding: 12px 16px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-muted);
+  border-bottom: 2px solid transparent;
+  white-space: nowrap;
+  transition: all .2s;
+}
+.vd-tab:hover { color: var(--text); }
+.vd-tab.active { color: var(--primary); border-bottom-color: var(--primary); }
+
+/* Panels */
+.vd-panel { display: none; animation: fadeIn .25s ease; }
+.vd-panel.active { display: block; }
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Performance list */
+.perf-list, .comm-list { display: flex; flex-direction: column; gap: 0; }
+.perf-row, .comm-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 13px;
+}
+.perf-row:last-child, .comm-row:last-child { border-bottom: none; }
+.perf-row span, .comm-row span { color: var(--text-muted); }
+.perf-row strong, .comm-row strong { font-weight: 700; }
+
+@media (max-width: 768px) {
+  .vd-stats { border-left: none; padding-left: 0; width: 100%; }
+  .vd-stats > div { text-align: left; }
+  .vd-logo { width: 70px; height: 70px; }
+}

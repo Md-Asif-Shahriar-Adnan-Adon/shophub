@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Become a Seller — ShopHub Seller Center</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/css/global.css" />
+  <link rel="stylesheet" href="../assets/css/vendor-register.css" />
+</head>
+<body class="vendor-auth-body">
+
+  <header class="vendor-auth-header">
+    <div class="container vendor-auth-header__inner">
+      <a href="../index.html" class="logo">Shop<span>Hub</span></a>
+      <span class="vendor-badge">Seller Center</span>
+      <div class="vendor-auth-header__right">
+        <span>Already a seller?</span>
+        <a href="login.html" class="btn btn--ghost btn--sm">Sign In</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="reg-wrap">
+    <div class="reg-container">
+
+      <!-- Stepper -->
+      <div class="reg-stepper">
+        <div class="reg-step active" data-step="1">
+          <div class="reg-circle">1</div>
+          <span>Account</span>
+        </div>
+        <div class="reg-line"></div>
+        <div class="reg-step" data-step="2">
+          <div class="reg-circle">2</div>
+          <span>Shop</span>
+        </div>
+        <div class="reg-line"></div>
+        <div class="reg-step" data-step="3">
+          <div class="reg-circle">3</div>
+          <span>Documents</span>
+        </div>
+      </div>
+
+      <!-- STEP 1: Account -->
+      <div class="reg-panel active" id="rp-1">
+        <h1>Create your seller account</h1>
+        <p class="muted">Start with your basic details</p>
+        <form id="stepForm1" novalidate>
+          <div class="form-grid">
+            <div class="field" id="f-owner">
+              <label>Full name *</label>
+              <input type="text" id="r-owner" placeholder="Your full name" required />
+              <span class="field__error"></span>
+            </div>
+            <div class="field" id="f-phone">
+              <label>Phone number *</label>
+              <input type="tel" id="r-phone" placeholder="+880 1XXX XXXXXX" required />
+              <span class="field__error"></span>
+            </div>
+            <div class="field field--full" id="f-email">
+              <label>Email address *</label>
+              <input type="email" id="r-email" placeholder="you@example.com" required />
+              <span class="field__error"></span>
+            </div>
+            <div class="field" id="f-pass">
+              <label>Password *</label>
+              <input type="password" id="r-pass" placeholder="••••••••" required />
+              <span class="field__error"></span>
+            </div>
+            <div class="field" id="f-conf">
+              <label>Confirm password *</label>
+              <input type="password" id="r-conf" placeholder="••••••••" required />
+              <span class="field__error"></span>
+            </div>
+          </div>
+          <div class="reg-actions">
+            <a href="login.html" class="btn btn--ghost">← Back to Login</a>
+            <button type="submit" class="btn btn--primary">Continue →</button>
+          </div>
+        </form>
+      </div>
+
+      <!-- STEP 2: Shop -->
+      <div class="reg-panel" id="rp-2">
+        <h1>Tell us about your shop</h1>
+        <p class="muted">Your shop will be visible to customers</p>
+        <form id="stepForm2" novalidate>
+          <div class="form-grid">
+            <div class="field field--full" id="f-shopname">
+              <label>Shop name *</label>
+              <input type="text" id="r-shopname" placeholder="e.g. TechZone" required />
+              <span class="field__error"></span>
+            </div>
+            <div class="field" id="f-cat">
+              <label>Primary category *</label>
+              <select id="r-cat" required>
+                <option value="">Select...</option>
+                <option>Electronics</option>
+                <option>Fashion</option>
+                <option>Home & Living</option>
+                <option>Beauty</option>
+                <option>Books</option>
+                <option>Sports</option>
+                <option>Other</option>
+              </select>
+              <span class="field__error"></span>
+            </div>
+            <div class="field">
+              <label>Shop logo (optional)</label>
+              <input type="file" id="r-logo" accept="image/*" />
+            </div>
+            <div class="field field--full" id="f-desc">
+              <label>Shop description *</label>
+              <textarea id="r-desc" rows="3" placeholder="Describe what you sell..." required></textarea>
+              <span class="field__error"></span>
+            </div>
+            <div class="field field--full">
+              <label>Shop policies (optional)</label>
+              <textarea id="r-policy" rows="2" placeholder="Shipping, returns, warranty..."></textarea>
+            </div>
+          </div>
+          <div class="reg-actions">
+            <button type="button" class="btn btn--ghost" data-back="1">← Back</button>
+            <button type="submit" class="btn btn--primary">Continue →</button>
+          </div>
+        </form>
+      </div>
+
+      <!-- STEP 3: Documents -->
+      <div class="reg-panel" id="rp-3">
+        <h1>Verify your identity</h1>
+        <p class="muted">Upload your documents for verification</p>
+        <form id="stepForm3" novalidate>
+          <div class="upload-grid">
+            <label class="upload-box">
+              <div class="upload-icon">🆔</div>
+              <strong>National ID (NID)</strong>
+              <span>Front and back · JPG/PNG/PDF</span>
+              <input type="file" id="r-nid" accept="image/*,.pdf" />
+              <span class="upload-status" id="status-nid"></span>
+            </label>
+            <label class="upload-box">
+              <div class="upload-icon">📄</div>
+              <strong>Trade License</strong>
+              <span>Optional but recommended</span>
+              <input type="file" id="r-license" accept="image/*,.pdf" />
+              <span class="upload-status" id="status-license"></span>
+            </label>
+          </div>
+
+          <label class="check">
+            <input type="checkbox" id="r-agree" />
+            <span>I agree to the <a href="../public/privacy-terms.html" class="link">Seller Terms</a> and confirm all information is accurate.</span>
+          </label>
+          <span class="field__error" id="err-agree" style="display:none"></span>
+
+          <div class="reg-actions">
+            <button type="button" class="btn btn--ghost" data-back="2">← Back</button>
+            <button type="submit" class="btn btn--primary" id="submitBtn">Submit Application</button>
+          </div>
+        </form>
+      </div>
+
+      <!-- SUCCESS -->
+      <div class="reg-panel" id="rp-success">
+        <div class="success-icon">✓</div>
+        <h1>Application Submitted!</h1>
+        <p>Thank you for applying to become a ShopHub seller. Our team will review your application within <strong>24–48 hours</strong>.</p>
+        <p>We'll email you at <strong id="successEmail"></strong> once approved.</p>
+        <a href="login.html" class="btn btn--primary btn--lg">Back to Login</a>
+      </div>
+
+    </div>
+  </main>
+
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/vendor-register.js"></script>
+</body>
+</html>

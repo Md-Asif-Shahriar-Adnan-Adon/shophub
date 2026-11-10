@@ -1,0 +1,44 @@
+.bal-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 20px;
+}
+.bal-card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px;
+}
+.bal-card--primary {
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  color: #fff;
+  border-color: var(--primary);
+}
+.bal-label {
+  font-size: 12px;
+  color: var(--text-muted);
+  display: block;
+  margin-bottom: 8px;
+}
+.bal-card--primary .bal-label { color: rgba(255,255,255,.75); }
+.bal-value {
+  font-size: 24px;
+  font-weight: 700;
+  font-family: var(--font-head);
+  display: block;
+  margin-bottom: 4px;
+}
+.bal-sub {
+  font-size: 11px;
+  color: var(--text-muted);
+}
+.bal-card--primary .bal-sub { color: rgba(255,255,255,.75); }
+
+@media (max-width: 992px) {
+  .bal-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 540px) {
+  .bal-grid { grid-template-columns: 1fr; }
+  .bal-value { font-size: 20px; }
+}

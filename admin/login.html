@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Login — ShopHub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/css/global.css" />
+  <link rel="stylesheet" href="../assets/css/admin-login.css" />
+</head>
+<body class="admin-auth-body">
+
+  <header class="admin-auth-header">
+    <div class="container admin-auth-header__inner">
+      <a href="../index.html" class="logo">Shop<span>Hub</span></a>
+      <span class="admin-badge">Admin Panel</span>
+    </div>
+  </header>
+
+  <main class="a-auth-wrap">
+    <div class="a-auth-card">
+      <div class="a-auth-icon">
+        <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+          <path d="M9 12l2 2 4-4"/>
+        </svg>
+      </div>
+
+      <h1>Admin Access</h1>
+      <p class="a-auth-sub">Authorized personnel only. All activity is monitored.</p>
+
+      <form id="adminLoginForm" novalidate>
+        <div class="field" id="f-email">
+          <label>Admin email</label>
+          <input type="email" id="email" placeholder="admin@shophub.com" autocomplete="username" required />
+          <span class="field__error"></span>
+        </div>
+
+        <div class="field" id="f-pass">
+          <label>Password</label>
+          <div class="password-wrap">
+            <input type="password" id="password" placeholder="••••••••" autocomplete="current-password" required />
+            <button type="button" class="password-toggle" id="togglePwd" aria-label="Show">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8S1 12 1 12z"/><circle cx="12" cy="12" r="3"/>
+              </svg>
+            </button>
+          </div>
+          <span class="field__error"></span>
+        </div>
+
+        <div class="field" id="f-2fa">
+          <label>2FA Code <span style="color: var(--text-muted); font-weight: 400">(6 digits)</span></label>
+          <input type="text" id="2fa" placeholder="123 456" maxlength="7" inputmode="numeric" />
+          <span class="field__error"></span>
+        </div>
+
+        <button type="submit" class="btn btn--primary btn--block btn--lg" id="loginBtn">
+          Sign In to Admin Panel
+        </button>
+      </form>
+
+      <div class="a-security-note">
+        <span>🔒</span>
+        <span>This is a secure area. Unauthorized access attempts are logged and reported.</span>
+      </div>
+    </div>
+  </main>
+
+  <script src="../assets/js/main.js"></script>
+  <script>
+    const pwd = document.getElementById('password');
+    document.getElementById('togglePwd')?.addEventListener('click', function () {
+      pwd.type = pwd.type === 'password' ? 'text' : 'password';
+    });
+
+    // Format 2FA: "123456" → "123 456"
+    document.getElementById('2fa')?.addEventListener('input', e => {
+      let v = e.target.value.replace(/\D/g, '').slice(0, 6);
+      if (v.length > 3) v = v.slice(0, 3) + ' ' + v.slice(3);
+      e.target.value = v;
+    });
+
+    function setErr(id, msg) {
+      const f = document.getElementById(id);
+      if (!f) return;
+      f.classList.add('error');
+      const e = f.querySelector('.field__error');
+      if (e) e.textContent = msg;
+    }
+    function clearErr(id) {
+      const f = document.getElementById(id);
+      if (f) f.classList.remove('error');
+    }
+    ['email|f-email', 'password|f-pass'].forEach(pair => {
+      const [i, f] = pair.split('|');
+      document.getElementById(i)?.addEventListener('input', () => clearErr(f));
+    });
+
+    document.getElementById('adminLoginForm')?.addEventListener('submit', e => {
+      e.preventDefault();
+      let valid = true;
+
+      const email = document.getElementById('email').value.trim();
+      if (!email) { setErr('f-email', 'Email required'); valid = false; }
+      else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { setErr('f-email', 'Invalid email'); valid = false; }
+
+      const pass = document.getElementById('password').value;
+      if (!pass) { setErr('f-pass', 'Password required'); valid = false; }
+      else if (pass.length < 6) { setErr('f-pass', 'Min 6 characters'); valid = false; }
+
+      if (!valid) return;
+
+      const btn = document.getElementById('loginBtn');
+      btn.textContent = 'Verifying...';
+      btn.disabled = true;
+
+      setTimeout(() => window.location.href = 'dashboard.html', 900);
+    });
+  </script>
+</body>
+</html>

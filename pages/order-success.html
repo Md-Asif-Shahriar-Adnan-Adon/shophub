@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Order Confirmed — ShopHub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/css/global.css" />
+  <link rel="stylesheet" href="../assets/css/order-success.css" />
+</head>
+<body>
+
+  <!-- ================= HEADER (simplified) ================= -->
+  <header class="header">
+    <div class="container header__inner">
+      <a href="../index.html" class="logo">Shop<span>Hub</span></a>
+      <div class="header__actions" style="margin-left:auto">
+        <a href="shop.html" class="btn btn--ghost btn--sm">Continue Shopping</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= ORDER SUCCESS ================= -->
+  <main class="container success-page">
+
+    <!-- ========== HERO: Check + Message ========== -->
+    <section class="success-hero">
+      <div class="check-animation">
+        <svg viewBox="0 0 52 52" class="check-svg">
+          <circle class="check-circle" cx="26" cy="26" r="25" fill="none"/>
+          <path class="check-mark" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+        </svg>
+      </div>
+
+      <h1>Thank you for your order! 🎉</h1>
+      <p class="success-sub">
+        Your order has been placed successfully. We've sent a confirmation email with all the details.
+      </p>
+
+      <div class="order-meta">
+        <div class="order-meta__item">
+          <span class="order-meta__label">Order ID</span>
+          <strong id="orderId">#SH-2026-48392</strong>
+        </div>
+        <div class="order-meta__divider"></div>
+        <div class="order-meta__item">
+          <span class="order-meta__label">Estimated Delivery</span>
+          <strong id="deliveryDate">Nov 8 – Nov 10, 2026</strong>
+        </div>
+        <div class="order-meta__divider"></div>
+        <div class="order-meta__item">
+          <span class="order-meta__label">Total Paid</span>
+          <strong id="orderTotal">$298.19</strong>
+        </div>
+      </div>
+
+      <div class="success-actions">
+        <a href="order-detail.html" class="btn btn--primary btn--lg">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+            <circle cx="12" cy="10" r="3"/>
+          </svg>
+          Track Order
+        </a>
+        <a href="shop.html" class="btn btn--ghost btn--lg">Continue Shopping</a>
+      </div>
+    </section>
+
+    <!-- ========== WHAT'S NEXT: Timeline ========== -->
+    <section class="next-steps">
+      <h2>What happens next?</h2>
+      <div class="timeline">
+
+        <div class="timeline-item done">
+          <div class="timeline-icon">✅</div>
+          <div class="timeline-body">
+            <h3>Order Confirmed</h3>
+            <p>We've received your order and sent a confirmation email.</p>
+            <span class="timeline-time">Just now</span>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-icon">📦</div>
+          <div class="timeline-body">
+            <h3>Processing</h3>
+            <p>Your items are being packed by the vendor. This usually takes 1–2 days.</p>
+            <span class="timeline-time">Within 24 hours</span>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-icon">🚚</div>
+          <div class="timeline-body">
+            <h3>Shipped</h3>
+            <p>Your order has left the warehouse and is on its way to you.</p>
+            <span class="timeline-time">In 1–2 days</span>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-icon">🏠</div>
+          <div class="timeline-body">
+            <h3>Delivered</h3>
+            <p>Enjoy your purchase! Don't forget to leave a review.</p>
+            <span class="timeline-time">Nov 8 – Nov 10</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========== ORDER SUMMARY ========== -->
+    <section class="order-summary-block">
+      <div class="summary-head">
+        <h2>Order Summary</h2>
+        <a href="order-detail.html" class="link">View full details →</a>
+      </div>
+
+      <div class="summary-list">
+        <div class="summary-item">
+          <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=120&q=80" alt="Headphones" />
+          <div class="summary-item__info">
+            <p class="summary-item__name">Wireless Headphones Pro</p>
+            <p class="summary-item__meta">TechZone • Qty: 1</p>
+          </div>
+          <strong class="summary-item__price">$89.99</strong>
+        </div>
+
+        <div class="summary-item">
+          <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=120&q=80" alt="Watch" />
+          <div class="summary-item__info">
+            <p class="summary-item__name">Smart Watch Series 5</p>
+            <p class="summary-item__meta">GadgetPro • Qty: 1</p>
+          </div>
+          <strong class="summary-item__price">$149.00</strong>
+        </div>
+
+        <div class="summary-item">
+          <img src="https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=120&q=80" alt="Sunglasses" />
+          <div class="summary-item__info">
+            <p class="summary-item__name">Classic Aviator Sunglasses</p>
+            <p class="summary-item__meta">Fashion Hub • Qty: 1</p>
+          </div>
+          <strong class="summary-item__price">$45.00</strong>
+        </div>
+      </div>
+
+      <div class="summary-totals">
+        <div class="totals-row">
+          <span>Subtotal</span>
+          <span>$283.99</span>
+        </div>
+        <div class="totals-row">
+          <span>Shipping</span>
+          <span class="free">Free</span>
+        </div>
+        <div class="totals-row">
+          <span>Tax</span>
+          <span>$14.20</span>
+        </div>
+        <div class="totals-row totals-row--total">
+          <span>Total</span>
+          <strong>$298.19</strong>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== DELIVERY ADDRESS ========== -->
+    <section class="address-block">
+      <h2>Delivery Address</h2>
+      <div class="address-card">
+        <div class="address-card__icon">📍</div>
+        <div>
+          <strong>John Doe</strong>
+          <p>House 12, Road 5, Dhanmondi</p>
+          <p>Dhaka, 1207, Bangladesh</p>
+          <p>+880 1712 345678</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== HELP ========== -->
+    <section class="help-block">
+      <div class="help-card">
+        <h3>Need help with your order?</h3>
+        <p>Our support team is available 24/7 to help you with anything.</p>
+        <div class="help-actions">
+          <a href="../public/contact.html" class="btn btn--ghost btn--sm">Contact Support</a>
+          <a href="#" class="btn btn--ghost btn--sm">Order FAQ</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= FOOTER (simplified) ================= -->
+  <footer class="footer">
+    <div class="footer__bottom">
+      <p>© 2026 ShopHub. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/order-success.js"></script>
+</body>
+</html>

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Settings — ShopHub Admin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/css/global.css" />
+  <link rel="stylesheet" href="../assets/css/admin-shared.css" />
+  <link rel="stylesheet" href="../assets/css/admin-settings.css" />
+</head>
+<body class="admin-body">
+  <div class="admin-layout">
+    <aside class="a-sidebar" id="aSidebar">
+      <div class="a-brand"><a href="../index.html" class="logo">Shop<span>Hub</span></a><span class="a-brand-badge">Admin</span></div>
+      <div class="a-admin-mini"><img src="https://i.pravatar.cc/80?img=68" alt="" /><div><strong>Super Admin</strong><span>admin@shophub.com</span></div></div>
+      <nav class="a-nav">
+        <a href="dashboard.html" class="a-link"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="9" rx="1"/><rect x="14" y="3" width="7" height="5" rx="1"/><rect x="14" y="12" width="7" height="9" rx="1"/><rect x="3" y="16" width="7" height="5" rx="1"/></svg>Dashboard</a>
+        <a href="vendors.html" class="a-link"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>Vendors</a>
+        <a href="products.html" class="a-link"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 7l-8-4-8 4 8 4 8-4z"/><path d="M4 7v10l8 4 8-4V7"/><path d="M12 11v10"/></svg>Products</a>
+        <a href="orders.html" class="a-link"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><path d="M3 6h18M16 10a4 4 0 0 1-8 0"/></svg>Orders</a>
+        <a href="payouts.html" class="a-link"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>Payouts</a>
+        <a href="customers.html" class="a-link"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>Customers</a>
+        <div class="a-divider"></div>
+        <div class="a-nav-label">System</div>
+        <a href="categories.html" class="a-link"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>Categories</a>
+        <a href="settings.html" class="a-link active"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>Settings</a>
+        <div class="a-divider"></div>
+        <a href="login.html" class="a-link a-link--danger" id="aLogout"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>Logout</a>
+      </nav>
+    </aside>
+
+    <div class="a-main">
+      <header class="a-topbar">
+        <button class="a-menu-toggle" id="aMenuToggle"><span></span><span></span><span></span></button>
+        <div class="a-search"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg><input type="text" placeholder="Search settings..." /></div>
+        <div class="a-topbar-right">
+          <button class="a-icon-btn"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></svg><span class="a-dot"></span></button>
+          <a href="settings.html" class="a-user"><img src="https://i.pravatar.cc/80?img=68" alt="" /><strong>Admin</strong></a>
+        </div>
+      </header>
+
+      <div class="a-content">
+        <div class="a-pagehead">
+          <div><h1>Settings</h1><p>Platform configuration and system settings</p></div>
+        </div>
+
+        <!-- Tabs -->
+        <div class="set-tabs">
+          <button class="set-tab active" data-tab="general">General</button>
+          <button class="set-tab" data-tab="commission">Commission</button>
+          <button class="set-tab" data-tab="payment">Payment</button>
+          <button class="set-tab" data-tab="shipping">Shipping</button>
+          <button class="set-tab" data-tab="roles">Roles</button>
+        </div>
+
+        <!-- General -->
+        <div class="set-panel active" id="set-general">
+          <div class="a-card">
+            <div class="a-card-head"><h2>Platform Information</h2></div>
+            <div class="set-grid">
+              <div class="field"><label>Platform name</label><input type="text" value="ShopHub" /></div>
+              <div class="field"><label>Support email</label><input type="email" value="support@shophub.com" /></div>
+              <div class="field"><label>Support phone</label><input type="tel" value="+880 1712 000000" /></div>
+              <div class="field"><label>Default currency</label><select><option>USD ($)</option><option>BDT (৳)</option><option>EUR (€)</option></select></div>
+              <div class="field field--full"><label>Tagline</label><input type="text" value="Shop from 10,000+ trusted vendors" /></div>
+              <div class="field field--full"><label>Platform description</label><textarea rows="2">Your trusted multi-vendor marketplace for everything you need.</textarea></div>
+            </div>
+            <div class="set-actions"><button class="btn btn--primary btn--sm">Save Changes</button></div>
+          </div>
+
+          <div class="a-card">
+            <div class="a-card-head"><h2>Account Settings</h2></div>
+            <div class="set-grid">
+              <div class="field"><label>Admin email</label><input type="email" value="admin@shophub.com" /></div>
+              <div class="field"><label>Admin name</label><input type="text" value="Super Admin" /></div>
+            </div>
+            <div class="set-actions"><button class="btn btn--ghost btn--sm">Change Password</button></div>
+          </div>
+        </div>
+
+        <!-- Commission -->
+        <div class="set-panel" id="set-commission">
+          <div class="a-card">
+            <div class="a-card-head"><h2>Commission Structure</h2></div>
+            <p class="set-desc">Default commission is applied to all vendors unless overridden per vendor.</p>
+            <div class="set-grid">
+              <div class="field"><label>Default commission (%)</label><input type="number" value="10" min="0" max="50" /></div>
+              <div class="field"><label>Payment gateway fee (%)</label><input type="number" value="2.5" step="0.1" /></div>
+              <div class="field"><label>Minimum payout ($)</label><input type="number" value="50" /></div>
+              <div class="field"><label>Payout cycle</label><select><option>Weekly</option><option>Bi-weekly</option><option>Monthly</option></select></div>
+            </div>
+            <div class="set-actions"><button class="btn btn--primary btn--sm">Save</button></div>
+          </div>
+
+          <div class="a-card">
+            <div class="a-card-head"><h2>Vendor-Specific Overrides</h2></div>
+            <div class="a-table-wrap">
+              <table class="a-table">
+                <thead><tr><th>Vendor</th><th>Default</th><th>Override</th><th>Action</th></tr></thead>
+                <tbody>
+                  <tr><td>TechZone</td><td>10%</td><td><strong>8%</strong></td><td><button class="link" style="font-size:12px">Edit</button></td></tr>
+                  <tr><td>Fashion Hub</td><td>10%</td><td><strong>9%</strong></td><td><button class="link" style="font-size:12px">Edit</button></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- Payment -->
+        <div class="set-panel" id="set-payment">
+          <div class="a-card">
+            <div class="a-card-head"><h2>Payment Gateways</h2></div>
+            <div class="toggle-list">
+              <div class="toggle-row">
+                <div><strong>Credit / Debit Card</strong><p>Visa, Mastercard, Amex via Stripe</p></div>
+                <label class="toggle"><input type="checkbox" checked /><span class="toggle__slider"></span></label>
+              </div>
+              <div class="toggle-row">
+                <div><strong>bKash</strong><p>Mobile wallet payments</p></div>
+                <label class="toggle"><input type="checkbox" checked /><span class="toggle__slider"></span></label>
+              </div>
+              <div class="toggle-row">
+                <div><strong>Nagad</strong><p>Mobile wallet payments</p></div>
+                <label class="toggle"><input type="checkbox" checked /><span class="toggle__slider"></span></label>
+              </div>
+              <div class="toggle-row">
+                <div><strong>Cash on Delivery</strong><p>Customer pays on delivery</p></div>
+                <label class="toggle"><input type="checkbox" checked /><span class="toggle__slider"></span></label>
+              </div>
+              <div class="toggle-row">
+                <div><strong>PayPal</strong><p>International payments</p></div>
+                <label class="toggle"><input type="checkbox" /><span class="toggle__slider"></span></label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Shipping -->
+        <div class="set-panel" id="set-shipping">
+          <div class="a-card">
+            <div class="a-card-head"><h2>Shipping Configuration</h2></div>
+            <div class="set-grid">
+              <div class="field"><label>Free shipping threshold ($)</label><input type="number" value="50" /></div>
+              <div class="field"><label>Default shipping fee ($)</label><input type="number" value="5.99" step="0.01" /></div>
+              <div class="field"><label>Express shipping fee ($)</label><input type="number" value="9.99" step="0.01" /></div>
+              <div class="field"><label>Same-day fee ($)</label><input type="number" value="19.99" step="0.01" /></div>
+            </div>
+            <div class="set-actions"><button class="btn btn--primary btn--sm">Save</button></div>
+          </div>
+        </div>
+
+        <!-- Roles -->
+        <div class="set-panel" id="set-roles">
+          <div class="a-card">
+            <div class="a-card-head">
+              <h2>Admin Roles</h2>
+              <button class="btn btn--primary btn--sm">+ Add Role</button>
+            </div>
+            <div class="a-table-wrap">
+              <table class="a-table">
+                <thead><tr><th>Role</th><th>Users</th><th>Permissions</th><th>Actions</th></tr></thead>
+                <tbody>
+                  <tr><td><strong>Super Admin</strong></td><td>1</td><td>Full access</td><td><button class="link" style="font-size:12px">Edit</button></td></tr>
+                  <tr><td><strong>Manager</strong></td><td>3</td><td>Vendors, Products, Orders</td><td><button class="link" style="font-size:12px">Edit</button></td></tr>
+                  <tr><td><strong>Support</strong></td><td>8</td><td>Orders, Customers</td><td><button class="link" style="font-size:12px">Edit</button></td></tr>
+                  <tr><td><strong>Finance</strong></td><td>2</td><td>Payouts, Reports</td><td><button class="link" style="font-size:12px">Edit</button></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="a-overlay" id="aOverlay"></div>
+  <script src="../assets/js/admin-shared.js"></script>
+  <script>
+    document.querySelectorAll('.set-tab').forEach(tab => {
+      tab.addEventListener('click', () => {
+        document.querySelectorAll('.set-tab').forEach(t => t.classList.remove('active'));
+        document.querySelectorAll('.set-panel').forEach(p => p.classList.remove('active'));
+        tab.classList.add('active');
+        document.getElementById('set-' + tab.dataset.tab)?.classList.add('active');
+      });
+    });
+  </script>
+</body>
+</html>

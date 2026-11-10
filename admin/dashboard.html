@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Dashboard — ShopHub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/css/global.css" />
+  <link rel="stylesheet" href="../assets/css/admin-shared.css" />
+  <link rel="stylesheet" href="../assets/css/admin-dashboard.css" />
+</head>
+<body class="admin-body">
+  <div class="admin-layout">
+
+    <aside class="a-sidebar" id="aSidebar">
+      <div class="a-brand"><a href="../index.html" class="logo">Shop<span>Hub</span></a><span class="a-brand-badge">Admin</span></div>
+      <div class="a-admin-mini">
+        <img src="https://i.pravatar.cc/80?img=68" alt="Admin" />
+        <div><strong>Super Admin</strong><span>admin@shophub.com</span></div>
+      </div>
+
+      <nav class="a-nav">
+        <a href="dashboard.html" class="a-link active">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="9" rx="1"/><rect x="14" y="3" width="7" height="5" rx="1"/><rect x="14" y="12" width="7" height="9" rx="1"/><rect x="3" y="16" width="7" height="5" rx="1"/></svg>
+          Dashboard
+        </a>
+        <a href="vendors.html" class="a-link">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          Vendors
+          <span class="a-badge a-badge--warn">5</span>
+        </a>
+        <a href="products.html" class="a-link">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 7l-8-4-8 4 8 4 8-4z"/><path d="M4 7v10l8 4 8-4V7"/><path d="M12 11v10"/></svg>
+          Products
+        </a>
+        <a href="orders.html" class="a-link">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><path d="M3 6h18M16 10a4 4 0 0 1-8 0"/></svg>
+          Orders
+        </a>
+        <a href="payouts.html" class="a-link">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          Payouts
+          <span class="a-badge">3</span>
+        </a>
+        <a href="customers.html" class="a-link">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          Customers
+        </a>
+        <div class="a-divider"></div>
+        <div class="a-nav-label">System</div>
+        <a href="categories.html" class="a-link">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+          Categories
+        </a>
+        <a href="settings.html" class="a-link">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+          Settings
+        </a>
+        <div class="a-divider"></div>
+        <a href="login.html" class="a-link a-link--danger" id="aLogout">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+          Logout
+        </a>
+      </nav>
+    </aside>
+
+    <div class="a-main">
+      <header class="a-topbar">
+        <button class="a-menu-toggle" id="aMenuToggle"><span></span><span></span><span></span></button>
+        <div class="a-search"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg><input type="text" placeholder="Search vendors, products, orders..." /></div>
+        <div class="a-topbar-right">
+          <button class="a-icon-btn"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></svg><span class="a-dot"></span></button>
+          <a href="settings.html" class="a-user"><img src="https://i.pravatar.cc/80?img=68" alt="Admin" /><strong>Admin</strong></a>
+        </div>
+      </header>
+
+      <div class="a-content">
+        <div class="a-pagehead">
+          <div><h1>Dashboard</h1><p>Platform overview — real-time metrics</p></div>
+          <select class="mini-select"><option>Last 7 days</option><option>Last 30 days</option><option>Last 90 days</option></select>
+        </div>
+
+        <!-- KPI -->
+        <div class="kpi-grid">
+          <div class="kpi-card">
+            <div class="kpi-icon kpi-icon--indigo">💰</div>
+            <div>
+              <span class="kpi-label">Total GMV</span>
+              <strong class="kpi-value">$248,920</strong>
+              <span class="kpi-trend kpi-trend--up">↑ 18.2% vs last month</span>
+            </div>
+          </div>
+          <div class="kpi-card">
+            <div class="kpi-icon kpi-icon--blue">🏪</div>
+            <div>
+              <span class="kpi-label">Total Vendors</span>
+              <strong class="kpi-value">1,248</strong>
+              <span class="kpi-trend kpi-trend--up">↑ 42 new this week</span>
+            </div>
+          </div>
+          <div class="kpi-card">
+            <div class="kpi-icon kpi-icon--amber">📦</div>
+            <div>
+              <span class="kpi-label">Total Orders</span>
+              <strong class="kpi-value">18,942</strong>
+              <span class="kpi-trend kpi-trend--up">↑ 12.4% vs last month</span>
+            </div>
+          </div>
+          <div class="kpi-card">
+            <div class="kpi-icon kpi-icon--red">⚠️</div>
+            <div>
+              <span class="kpi-label">Pending Approvals</span>
+              <strong class="kpi-value">5</strong>
+              <span class="kpi-trend">Awaiting review</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Chart + Top vendors -->
+        <div class="dash-grid">
+          <div class="a-card">
+            <div class="a-card-head"><h2>Revenue Overview</h2><a href="#" class="link">View report →</a></div>
+            <div class="chart-bars-wrap">
+              <div class="chart-bars">
+                <div class="cbar" style="height:45%"><span>Jan</span></div>
+                <div class="cbar" style="height:62%"><span>Feb</span></div>
+                <div class="cbar" style="height:55%"><span>Mar</span></div>
+                <div class="cbar" style="height:78%"><span>Apr</span></div>
+                <div class="cbar" style="height:68%"><span>May</span></div>
+                <div class="cbar" style="height:88%"><span>Jun</span></div>
+                <div class="cbar" style="height:95%"><span>Jul</span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="a-card">
+            <div class="a-card-head"><h2>Top Vendors</h2><a href="vendors.html" class="link">View all</a></div>
+            <div class="top-list">
+              <div class="top-item">
+                <span class="top-rank">1</span>
+                <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=60&q=80" alt="" />
+                <div><strong>TechZone</strong><span>1,248 orders</span></div>
+                <em>$24.8K</em>
+              </div>
+              <div class="top-item">
+                <span class="top-rank">2</span>
+                <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=60&q=80" alt="" />
+                <div><strong>Fashion Hub</strong><span>892 orders</span></div>
+                <em>$18.2K</em>
+              </div>
+              <div class="top-item">
+                <span class="top-rank">3</span>
+                <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=60&q=80" alt="" />
+                <div><strong>HomeStyle</strong><span>654 orders</span></div>
+                <em>$12.5K</em>
+              </div>
+              <div class="top-item">
+                <span class="top-rank">4</span>
+                <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=60&q=80" alt="" />
+                <div><strong>GadgetPro</strong><span>445 orders</span></div>
+                <em>$9.8K</em>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Recent orders -->
+        <div class="a-card" style="margin-top:20px">
+          <div class="a-card-head"><h2>Recent Orders</h2><a href="orders.html" class="link">View all →</a></div>
+          <div class="a-table-wrap">
+            <table class="a-table">
+              <thead>
+                <tr><th>Order</th><th>Customer</th><th>Vendor</th><th>Total</th><th>Status</th><th></th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>#48392</strong></td>
+                  <td>Alex Johnson</td>
+                  <td>TechZone</td>
+                  <td><strong>$298.19</strong></td>
+                  <td><span class="st st--shipped">Shipped</span></td>
+                  <td><a href="order-detail.html" class="link">View</a></td>
+                </tr>
+                <tr>
+                  <td><strong>#48214</strong></td>
+                  <td>Maria Chen</td>
+                  <td>GadgetPro</td>
+                  <td><strong>$149.00</strong></td>
+                  <td><span class="st st--delivered">Delivered</span></td>
+                  <td><a href="order-detail.html" class="link">View</a></td>
+                </tr>
+                <tr>
+                  <td><strong>#48102</strong></td>
+                  <td>Sam Rahman</td>
+                  <td>Fashion Hub</td>
+                  <td><strong>$88.00</strong></td>
+                  <td><span class="st st--processing">Processing</span></td>
+                  <td><a href="order-detail.html" class="link">View</a></td>
+                </tr>
+                <tr>
+                  <td><strong>#47988</strong></td>
+                  <td>John Doe</td>
+                  <td>HomeStyle</td>
+                  <td><strong>$59.00</strong></td>
+                  <td><span class="st st--cancelled">Cancelled</span></td>
+                  <td><a href="order-detail.html" class="link">View</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="a-overlay" id="aOverlay"></div>
+  <script src="../assets/js/admin-shared.js"></script>
+</body>
+</html>

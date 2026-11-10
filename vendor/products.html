@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Products — ShopHub Seller Center</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/css/global.css" />
+  <link rel="stylesheet" href="../assets/css/vendor-shared.css" />
+  <link rel="stylesheet" href="../assets/css/vendor-dashboard.css" />
+  <link rel="stylesheet" href="../assets/css/vendor-products.css" />
+</head>
+<body class="vendor-body">
+  <div class="vendor-layout">
+    <aside class="v-sidebar" id="vSidebar">
+      <div class="v-brand"><a href="../index.html" class="logo">Shop<span>Hub</span></a><span class="v-brand-badge">Seller</span></div>
+      <div class="v-shop-mini"><img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=80&q=80" alt="Shop" /><div><strong>TechZone</strong><span>Active Shop</span></div></div>
+      <nav class="v-nav">
+        <a href="dashboard.html" class="v-link"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="9" rx="1"/><rect x="14" y="3" width="7" height="5" rx="1"/><rect x="14" y="12" width="7" height="9" rx="1"/><rect x="3" y="16" width="7" height="5" rx="1"/></svg>Dashboard</a>
+        <a href="products.html" class="v-link active"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 7l-8-4-8 4 8 4 8-4z"/><path d="M4 7v10l8 4 8-4V7"/><path d="M12 11v10"/></svg>Products</a>
+        <a href="orders.html" class="v-link"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><path d="M3 6h18M16 10a4 4 0 0 1-8 0"/></svg>Orders<span class="v-badge">4</span></a>
+        <a href="earnings.html" class="v-link"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>Earnings</a>
+        <a href="reviews.html" class="v-link"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>Reviews</a>
+        <div class="v-divider"></div>
+        <div class="v-nav-label">Settings</div>
+        <a href="shop-settings.html" class="v-link"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>Shop Settings</a>
+        <div class="v-divider"></div>
+        <a href="login.html" class="v-link v-link--danger" id="vLogout"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>Logout</a>
+      </nav>
+    </aside>
+
+    <div class="v-main">
+      <header class="v-topbar">
+        <button class="v-menu-toggle" id="vMenuToggle"><span></span><span></span><span></span></button>
+        <div class="v-search"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg><input type="text" placeholder="Search products..." id="prodSearch" /></div>
+        <div class="v-topbar-right">
+          <button class="v-icon-btn"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></svg><span class="v-dot"></span></button>
+          <a href="shop-settings.html" class="v-user"><img src="https://i.pravatar.cc/80?img=12" alt="User" /><strong>John Doe</strong></a>
+        </div>
+      </header>
+
+      <div class="v-content">
+        <div class="v-pagehead">
+          <div><h1>Products</h1><p>Manage your shop inventory</p></div>
+          <a href="add-product.html" class="btn btn--primary btn--sm">+ Add Product</a>
+        </div>
+
+        <!-- Filter bar -->
+        <div class="v-card" style="padding: 12px 16px; margin-bottom: 16px">
+          <div class="filter-row">
+            <div class="filter-tabs">
+              <button class="ftab active" data-filter="all">All <span>248</span></button>
+              <button class="ftab" data-filter="active">Active <span>240</span></button>
+              <button class="ftab" data-filter="draft">Draft <span>5</span></button>
+              <button class="ftab" data-filter="oos">Out of Stock <span>3</span></button>
+            </div>
+            <select class="mini-select">
+              <option>Sort: Newest</option>
+              <option>Sort: Price High</option>
+              <option>Sort: Price Low</option>
+              <option>Sort: Best Selling</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Table -->
+        <div class="v-card">
+          <div class="v-table-wrap">
+            <table class="v-table prod-table">
+              <thead>
+                <tr>
+                  <th style="width: 40px"><input type="checkbox" id="selectAll" /></th>
+                  <th>Product</th>
+                  <th>Category</th>
+                  <th>Price</th>
+                  <th>Stock</th>
+                  <th>Status</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="prodBody">
+                <tr data-name="Wireless Headphones Pro" data-status="active">
+                  <td><input type="checkbox" class="row-check" /></td>
+                  <td>
+                    <div class="prod-cell">
+                      <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=60&q=80" alt="" />
+                      <div><strong>Wireless Headphones Pro</strong><span>SKU: WH-001</span></div>
+                    </div>
+                  </td>
+                  <td>Electronics</td>
+                  <td><strong>$89.99</strong></td>
+                  <td>45</td>
+                  <td><span class="st st--active">Active</span></td>
+                  <td>
+                    <a href="edit-product.html" class="icon-action" title="Edit">
+                      <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4z"/></svg>
+                    </a>
+                    <button class="icon-action icon-action--danger delete-btn" title="Delete">
+                      <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"/></svg>
+                    </button>
+                  </td>
+                </tr>
+
+                <tr data-name="MacBook Air M2 13" data-status="active">
+                  <td><input type="checkbox" class="row-check" /></td>
+                  <td>
+                    <div class="prod-cell">
+                      <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=60&q=80" alt="" />
+                      <div><strong>MacBook Air M2 13"</strong><span>SKU: MB-002</span></div>
+                    </div>
+                  </td>
+                  <td>Electronics</td>
+                  <td><strong>$999.00</strong></td>
+                  <td>12</td>
+                  <td><span class="st st--active">Active</span></td>
+                  <td>
+                    <a href="edit-product.html" class="icon-action"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4z"/></svg></a>
+                    <button class="icon-action icon-action--danger delete-btn"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"/></svg></button>
+                  </td>
+                </tr>
+
+                <tr data-name="Smart Watch Series 5" data-status="draft">
+                  <td><input type="checkbox" class="row-check" /></td>
+                  <td>
+                    <div class="prod-cell">
+                      <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=60&q=80" alt="" />
+                      <div><strong>Smart Watch Series 5</strong><span>SKU: SW-003</span></div>
+                    </div>
+                  </td>
+                  <td>Wearables</td>
+                  <td><strong>$149.00</strong></td>
+                  <td>0</td>
+                  <td><span class="st st--draft">Draft</span></td>
+                  <td>
+                    <a href="edit-product.html" class="icon-action"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4z"/></svg></a>
+                    <button class="icon-action icon-action--danger delete-btn"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"/></svg></button>
+                  </td>
+                </tr>
+
+                <tr data-name="Bluetooth Speaker Mini" data-status="oos">
+                  <td><input type="checkbox" class="row-check" /></td>
+                  <td>
+                    <div class="prod-cell">
+                      <img src="https://images.unsplash.com/photo-1546435770-a3e426bf472b?w=60&q=80" alt="" />
+                      <div><strong>Bluetooth Speaker Mini</strong><span>SKU: SP-004</span></div>
+                    </div>
+                  </td>
+                  <td>Audio</td>
+                  <td><strong>$59.00</strong></td>
+                  <td>0</td>
+                  <td><span class="st st--oos">Out of Stock</span></td>
+                  <td>
+                    <a href="edit-product.html" class="icon-action"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4z"/></svg></a>
+                    <button class="icon-action icon-action--danger delete-btn"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"/></svg></button>
+                  </td>
+                </tr>
+
+                <tr data-name="Mechanical Keyboard RGB" data-status="active">
+                  <td><input type="checkbox" class="row-check" /></td>
+                  <td>
+                    <div class="prod-cell">
+                      <img src="https://images.unsplash.com/photo-1524805444758-089113d48a6d?w=60&q=80" alt="" />
+                      <div><strong>Mechanical Keyboard RGB</strong><span>SKU: KB-005</span></div>
+                    </div>
+                  </td>
+                  <td>Accessories</td>
+                  <td><strong>$89.00</strong></td>
+                  <td>28</td>
+                  <td><span class="st st--active">Active</span></td>
+                  <td>
+                    <a href="edit-product.html" class="icon-action"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4z"/></svg></a>
+                    <button class="icon-action icon-action--danger delete-btn"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"/></svg></button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Bulk actions bar (shows when items selected) -->
+          <div class="bulk-bar" id="bulkBar" hidden>
+            <span><strong id="bulkCount">0</strong> selected</span>
+            <div>
+              <button class="btn btn--ghost btn--sm" id="bulkActivate">Activate</button>
+              <button class="btn btn--ghost btn--sm" id="bulkDraft">Move to Draft</button>
+              <button class="btn btn--ghost btn--sm" id="bulkDelete" style="color:var(--danger)">Delete</button>
+            </div>
+          </div>
+
+          <!-- Pagination -->
+          <div class="v-pagination">
+            <span>Showing 1–5 of 248</span>
+            <div class="pg-btns">
+              <button class="page-btn" disabled>‹</button>
+              <button class="page-btn active">1</button>
+              <button class="page-btn">2</button>
+              <button class="page-btn">3</button>
+              <button class="page-btn">›</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="v-overlay" id="vOverlay"></div>
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/vendor-shared.js"></script>
+  <script src="../assets/js/vendor-products.js"></script>
+</body>
+</html>

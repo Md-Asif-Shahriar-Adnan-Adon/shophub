@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Electronics — ShopHub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/css/global.css" />
+  <link rel="stylesheet" href="../assets/css/category.css" />
+</head>
+<body>
+
+  <!-- ================= HEADER ================= -->
+  <header class="header">
+    <div class="container header__inner">
+      <a href="../index.html" class="logo">Shop<span>Hub</span></a>
+      <div class="search">
+        <input type="text" placeholder="Search products, brands, vendors..." />
+        <button class="search__btn" aria-label="Search">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/>
+          </svg>
+        </button>
+      </div>
+      <nav class="header__actions">
+        <a href="wishlist.html" class="icon-btn" aria-label="Wishlist">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"/>
+          </svg>
+        </a>
+        <a href="cart.html" class="icon-btn" aria-label="Cart">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/>
+            <path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"/>
+          </svg>
+          <span class="badge">3</span>
+        </a>
+        <a href="account.html" class="icon-btn" aria-label="Account">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="8" r="4"/><path d="M4 21v-2a6 6 0 0 1 6-6h4a6 6 0 0 1 6 6v2"/>
+          </svg>
+        </a>
+      </nav>
+      <button class="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ================= BREADCRUMB ================= -->
+  <div class="breadcrumb-bar">
+    <div class="container">
+      <nav class="breadcrumb">
+        <a href="../index.html">Home</a> <span>/</span>
+        <a href="shop.html">Shop</a> <span>/</span>
+        <strong>Electronics</strong>
+      </nav>
+    </div>
+  </div>
+
+  <!-- ================= CATEGORY HERO ================= -->
+  <section class="category-hero">
+    <div class="container category-hero__inner">
+      <div class="category-hero__content">
+        <span class="category-hero__tag">🎧 Category</span>
+        <h1>Electronics</h1>
+        <p>Discover the latest gadgets — phones, laptops, audio, cameras and more from top vendors.</p>
+        <div class="category-hero__meta">
+          <span><strong>248</strong> Products</span>
+          <span>•</span>
+          <span><strong>32</strong> Vendors</span>
+          <span>•</span>
+          <span>⭐ <strong>4.7</strong> Avg rating</span>
+        </div>
+      </div>
+      <div class="category-hero__img">
+        <img src="https://images.unsplash.com/photo-1498049794561-7780e7231661?w=600&q=80" alt="Electronics" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SUBCATEGORY CHIPS ================= -->
+  <section class="subcats-bar">
+    <div class="container subcats-scroll">
+      <a href="#" class="subcat-chip active">All Electronics</a>
+      <a href="#" class="subcat-chip">📱 Smartphones</a>
+      <a href="#" class="subcat-chip">💻 Laptops</a>
+      <a href="#" class="subcat-chip">🎧 Audio</a>
+      <a href="#" class="subcat-chip">⌚ Wearables</a>
+      <a href="#" class="subcat-chip">📷 Cameras</a>
+      <a href="#" class="subcat-chip">🎮 Gaming</a>
+      <a href="#" class="subcat-chip">🔌 Accessories</a>
+      <a href="#" class="subcat-chip">📺 TVs</a>
+    </div>
+  </section>
+
+  <!-- ================= MAIN LAYOUT ================= -->
+  <main class="container shop-layout">
+
+    <!-- ========== FILTER SIDEBAR ========== -->
+    <aside class="filter-sidebar" id="filterSidebar">
+      <div class="filter-sidebar__head">
+        <h3>Filters</h3>
+        <button class="filter-clear">Clear all</button>
+      </div>
+
+      <!-- Brand -->
+      <div class="filter-group">
+        <button class="filter-group__title" data-toggle>
+          Brand <span class="chevron">▾</span>
+        </button>
+        <div class="filter-group__body">
+          <label class="check"><input type="checkbox" checked /><span>Apple</span><em>(42)</em></label>
+          <label class="check"><input type="checkbox" /><span>Samsung</span><em>(38)</em></label>
+          <label class="check"><input type="checkbox" /><span>Sony</span><em>(29)</em></label>
+          <label class="check"><input type="checkbox" /><span>Xiaomi</span><em>(26)</em></label>
+          <label class="check"><input type="checkbox" /><span>Dell</span><em>(18)</em></label>
+          <label class="check"><input type="checkbox" /><span>HP</span><em>(15)</em></label>
+        </div>
+      </div>
+
+      <!-- Price -->
+      <div class="filter-group">
+        <button class="filter-group__title" data-toggle>
+          Price Range <span class="chevron">▾</span>
+        </button>
+        <div class="filter-group__body">
+          <div class="price-range">
+            <input type="range" min="0" max="2000" value="800" class="range" />
+            <div class="price-range__labels">
+              <span>$0</span>
+              <span>$2000</span>
+            </div>
+          </div>
+          <div class="price-inputs">
+            <input type="number" placeholder="Min" value="0" />
+            <span>—</span>
+            <input type="number" placeholder="Max" value="800" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Rating -->
+      <div class="filter-group">
+        <button class="filter-group__title" data-toggle>
+          Rating <span class="chevron">▾</span>
+        </button>
+        <div class="filter-group__body">
+          <label class="radio"><input type="radio" name="rating" /><span>★★★★★ & up</span></label>
+          <label class="radio"><input type="radio" name="rating" /><span>★★★★☆ & up</span></label>
+          <label class="radio"><input type="radio" name="rating" /><span>★★★☆☆ & up</span></label>
+          <label class="radio"><input type="radio" name="rating" checked /><span>All ratings</span></label>
+        </div>
+      </div>
+
+      <!-- Vendor -->
+      <div class="filter-group">
+        <button class="filter-group__title" data-toggle>
+          Vendor <span class="chevron">▾</span>
+        </button>
+        <div class="filter-group__body">
+          <label class="check"><input type="checkbox" /><span>TechZone</span></label>
+          <label class="check"><input type="checkbox" /><span>GadgetPro</span></label>
+          <label class="check"><input type="checkbox" /><span>MegaTech</span></label>
+        </div>
+      </div>
+
+      <!-- Features -->
+      <div class="filter-group">
+        <button class="filter-group__title" data-toggle>
+          Features <span class="chevron">▾</span>
+        </button>
+        <div class="filter-group__body">
+          <label class="check"><input type="checkbox" /><span>Free shipping</span></label>
+          <label class="check"><input type="checkbox" /><span>On sale</span></label>
+          <label class="check"><input type="checkbox" checked /><span>In stock</span></label>
+        </div>
+      </div>
+    </aside>
+
+    <!-- ========== MAIN CONTENT ========== -->
+    <section class="shop-main">
+
+      <!-- Toolbar -->
+      <div class="toolbar">
+        <div class="toolbar__left">
+          <button class="filter-toggle" id="filterToggle">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M4 6h16M7 12h10M10 18h4"/>
+            </svg>
+            Filters
+          </button>
+          <p class="result-count"><strong>248</strong> products found</p>
+        </div>
+        <div class="toolbar__right">
+          <div class="sort">
+            <label>Sort by:</label>
+            <select>
+              <option>Featured</option>
+              <option>Price: Low to High</option>
+              <option>Price: High to Low</option>
+              <option>Newest</option>
+              <option>Best Rating</option>
+            </select>
+          </div>
+          <div class="view-toggle">
+            <button class="view-btn active" data-view="grid" aria-label="Grid view">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                <rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/>
+                <rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/>
+              </svg>
+            </button>
+            <button class="view-btn" data-view="list" aria-label="List view">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                <rect x="3" y="4" width="18" height="4" rx="1"/><rect x="3" y="10" width="18" height="4" rx="1"/>
+                <rect x="3" y="16" width="18" height="4" rx="1"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Active chips -->
+      <div class="chips">
+        <span class="chips__label">Active:</span>
+        <span class="chip">Apple <button aria-label="Remove">✕</button></span>
+        <span class="chip">In Stock <button aria-label="Remove">✕</button></span>
+        <span class="chip">$0 – $800 <button aria-label="Remove">✕</button></span>
+        <button class="chips__clear">Clear all</button>
+      </div>
+
+      <!-- Product grid -->
+      <div class="products" id="productGrid">
+
+        <article class="product-card">
+          <div class="product-card__img">
+            <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400&q=80" alt="Headphones" />
+            <span class="tag tag--sale">-30%</span>
+            <button class="wish" aria-label="Wishlist">♡</button>
+          </div>
+          <div class="product-card__body">
+            <span class="vendor-tag">TechZone</span>
+            <h3>Wireless Headphones Pro</h3>
+            <div class="rating">★★★★★ <span>(128)</span></div>
+            <div class="price">
+              <span class="price__now">$89.99</span>
+              <span class="price__old">$129.99</span>
+            </div>
+            <button class="btn btn--primary btn--block">Add to Cart</button>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-card__img">
+            <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=400&q=80" alt="Watch" />
+            <span class="tag tag--new">New</span>
+            <button class="wish" aria-label="Wishlist">♡</button>
+          </div>
+          <div class="product-card__body">
+            <span class="vendor-tag">GadgetPro</span>
+            <h3>Smart Watch Series 5</h3>
+            <div class="rating">★★★★☆ <span>(86)</span></div>
+            <div class="price"><span class="price__now">$149.00</span></div>
+            <button class="btn btn--primary btn--block">Add to Cart</button>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-card__img">
+            <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=400&q=80" alt="MacBook" />
+            <span class="tag tag--sale">-15%</span>
+            <button class="wish" aria-label="Wishlist">♡</button>
+          </div>
+          <div class="product-card__body">
+            <span class="vendor-tag">TechZone</span>
+            <h3>MacBook Air M2 13"</h3>
+            <div class="rating">★★★★★ <span>(320)</span></div>
+            <div class="price">
+              <span class="price__now">$999.00</span>
+              <span class="price__old">$1199.00</span>
+            </div>
+            <button class="btn btn--primary btn--block">Add to Cart</button>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-card__img">
+            <img src="https://images.unsplash.com/photo-1546435770-a3e426bf472b?w=400&q=80" alt="Speaker" />
+            <button class="wish" aria-label="Wishlist">♡</button>
+          </div>
+          <div class="product-card__body">
+            <span class="vendor-tag">GadgetPro</span>
+            <h3>Bluetooth Speaker Mini</h3>
+            <div class="rating">★★★★☆ <span>(72)</span></div>
+            <div class="price"><span class="price__now">$59.00</span></div>
+            <button class="btn btn--primary btn--block">Add to Cart</button>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-card__img">
+            <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?w=400&q=80" alt="Camera" />
+            <span class="tag tag--new">New</span>
+            <button class="wish" aria-label="Wishlist">♡</button>
+          </div>
+          <div class="product-card__body">
+            <span class="vendor-tag">MegaTech</span>
+            <h3>DSLR Camera 24MP</h3>
+            <div class="rating">★★★★★ <span>(63)</span></div>
+            <div class="price"><span class="price__now">$649.00</span></div>
+            <button class="btn btn--primary btn--block">Add to Cart</button>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-card__img">
+            <img src="https://images.unsplash.com/photo-1524805444758-089113d48a6d?w=400&q=80" alt="Keyboard" />
+            <button class="wish" aria-label="Wishlist">♡</button>
+          </div>
+          <div class="product-card__body">
+            <span class="vendor-tag">GadgetPro</span>
+            <h3>Mechanical Keyboard RGB</h3>
+            <div class="rating">★★★★☆ <span>(150)</span></div>
+            <div class="price"><span class="price__now">$89.00</span></div>
+            <button class="btn btn--primary btn--block">Add to Cart</button>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-card__img">
+            <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=400&q=80" alt="Smartphone" />
+            <span class="tag tag--sale">-10%</span>
+            <button class="wish" aria-label="Wishlist">♡</button>
+          </div>
+          <div class="product-card__body">
+            <span class="vendor-tag">TechZone</span>
+            <h3>iPhone 15 Pro Max</h3>
+            <div class="rating">★★★★★ <span>(412)</span></div>
+            <div class="price">
+              <span class="price__now">$1,099.00</span>
+              <span class="price__old">$1,219.00</span>
+            </div>
+            <button class="btn btn--primary btn--block">Add to Cart</button>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-card__img">
+            <img src="https://images.unsplash.com/photo-1593305841991-05c297ba4575?w=400&q=80" alt="Tablet" />
+            <button class="wish" aria-label="Wishlist">♡</button>
+          </div>
+          <div class="product-card__body">
+            <span class="vendor-tag">MegaTech</span>
+            <h3>iPad Air 11" M2</h3>
+            <div class="rating">★★★★★ <span>(198)</span></div>
+            <div class="price"><span class="price__now">$599.00</span></div>
+            <button class="btn btn--primary btn--block">Add to Cart</button>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-card__img">
+            <img src="https://images.unsplash.com/photo-1583394838336-acd977736f90?w=400&q=80" alt="Headphones" />
+            <button class="wish" aria-label="Wishlist">♡</button>
+          </div>
+          <div class="product-card__body">
+            <span class="vendor-tag">GadgetPro</span>
+            <h3>Studio Headphones X1</h3>
+            <div class="rating">★★★★☆ <span>(91)</span></div>
+            <div class="price"><span class="price__now">$179.00</span></div>
+            <button class="btn btn--primary btn--block">Add to Cart</button>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- Pagination -->
+      <nav class="pagination">
+        <button class="page-btn" disabled aria-label="Previous">‹</button>
+        <button class="page-btn active">1</button>
+        <button class="page-btn">2</button>
+        <button class="page-btn">3</button>
+        <span class="page-dots">…</span>
+        <button class="page-btn">12</button>
+        <button class="page-btn" aria-label="Next">›</button>
+      </nav>
+
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__col">
+        <a href="../index.html" class="logo">Shop<span>Hub</span></a>
+        <p>Your trusted multi-vendor marketplace for everything you need.</p>
+      </div>
+      <div class="footer__col">
+        <h4>Shop</h4>
+        <a href="shop.html">All Products</a><a href="category.html">Categories</a><a href="#">Vendors</a><a href="#">Deals</a>
+      </div>
+      <div class="footer__col">
+        <h4>Support</h4>
+        <a href="#">Help Center</a><a href="../public/contact.html">Contact Us</a><a href="#">Returns</a><a href="#">FAQ</a>
+      </div>
+      <div class="footer__col">
+        <h4>Company</h4>
+        <a href="../public/about.html">About Us</a><a href="../public/privacy-terms.html">Privacy</a><a href="../public/privacy-terms.html">Terms</a><a href="#">Careers</a>
+      </div>
+      <div class="footer__col">
+        <h4>Newsletter</h4>
+        <p>Get the latest deals in your inbox.</p>
+        <form class="newsletter">
+          <input type="email" placeholder="Your email" required />
+          <button class="btn btn--primary btn--sm">Subscribe</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>© 2026 ShopHub. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- ============ MOBILE FILTER OVERLAY ============ -->
+  <div class="overlay" id="overlay"></div>
+
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/category.js"></script>
+</body>
+</html>

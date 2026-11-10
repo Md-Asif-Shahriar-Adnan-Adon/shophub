@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Order #48392 — ShopHub Admin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/css/global.css" />
+  <link rel="stylesheet" href="../assets/css/admin-shared.css" />
+  <link rel="stylesheet" href="../assets/css/admin-vendor-detail.css" />
+</head>
+<body class="admin-body">
+  <div class="admin-layout">
+    <aside class="a-sidebar" id="aSidebar">
+      <div class="a-brand"><a href="../index.html" class="logo">Shop<span>Hub</span></a><span class="a-brand-badge">Admin</span></div>
+      <div class="a-admin-mini"><img src="https://i.pravatar.cc/80?img=68" alt="" /><div><strong>Super Admin</strong><span>admin@shophub.com</span></div></div>
+      <nav class="a-nav">
+        <a href="dashboard.html" class="a-link"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="9" rx="1"/><rect x="14" y="3" width="7" height="5" rx="1"/><rect x="14" y="12" width="7" height="9" rx="1"/><rect x="3" y="16" width="7" height="5" rx="1"/></svg>Dashboard</a>
+        <a href="vendors.html" class="a-link"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>Vendors</a>
+        <a href="products.html" class="a-link"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 7l-8-4-8 4 8 4 8-4z"/><path d="M4 7v10l8 4 8-4V7"/><path d="M12 11v10"/></svg>Products</a>
+        <a href="orders.html" class="a-link active"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><path d="M3 6h18M16 10a4 4 0 0 1-8 0"/></svg>Orders</a>
+        <a href="payouts.html" class="a-link"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>Payouts<span class="a-badge">3</span></a>
+        <a href="customers.html" class="a-link"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>Customers</a>
+        <div class="a-divider"></div>
+        <div class="a-nav-label">System</div>
+        <a href="categories.html" class="a-link"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>Categories</a>
+        <a href="settings.html" class="a-link"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>Settings</a>
+        <div class="a-divider"></div>
+        <a href="login.html" class="a-link a-link--danger" id="aLogout"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>Logout</a>
+      </nav>
+    </aside>
+
+    <div class="a-main">
+      <header class="a-topbar">
+        <button class="a-menu-toggle" id="aMenuToggle"><span></span><span></span><span></span></button>
+        <div class="a-search"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg><input type="text" placeholder="Search..." /></div>
+        <div class="a-topbar-right">
+          <button class="a-icon-btn"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></svg><span class="a-dot"></span></button>
+          <a href="settings.html" class="a-user"><img src="https://i.pravatar.cc/80?img=68" alt="" /><strong>Admin</strong></a>
+        </div>
+      </header>
+
+      <div class="a-content">
+        <div class="a-pagehead">
+          <div>
+            <a href="orders.html" class="link" style="font-size:12px">← Back to Orders</a>
+            <h1 style="margin-top:6px">Order #48392</h1>
+            <p>Placed Nov 3, 2026 at 2:14 PM · Status: <span class="st st--shipped">Shipped</span></p>
+          </div>
+          <div style="display:flex;gap:8px;flex-wrap:wrap">
+            <button class="btn btn--ghost btn--sm" id="invoiceBtn">⤓ Invoice</button>
+            <button class="btn btn--ghost btn--sm" id="printBtn">🖨 Print</button>
+          </div>
+        </div>
+
+        <div class="od-grid">
+          <div class="od-left">
+            <div class="a-card">
+              <div class="a-card-head"><h2>Order Items (3)</h2></div>
+              <div class="od-items">
+                <div class="od-item">
+                  <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=100&q=80" alt="" />
+                  <div><strong>Wireless Headphones Pro</strong><span>TechZone · SKU: WH-001</span></div>
+                  <div class="od-item-meta"><span>Qty: 1</span><strong>$89.99</strong></div>
+                </div>
+                <div class="od-item">
+                  <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=100&q=80" alt="" />
+                  <div><strong>Smart Watch Series 5</strong><span>GadgetPro · SKU: SW-003</span></div>
+                  <div class="od-item-meta"><span>Qty: 1</span><strong>$149.00</strong></div>
+                </div>
+                <div class="od-item">
+                  <img src="https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=100&q=80" alt="" />
+                  <div><strong>Classic Aviator Sunglasses</strong><span>Fashion Hub · SKU: SG-002</span></div>
+                  <div class="od-item-meta"><span>Qty: 1</span><strong>$45.00</strong></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="a-card">
+              <div class="a-card-head"><h2>Status Timeline</h2></div>
+              <div class="od-timeline">
+                <div class="od-tl-item done"><div class="od-tl-icon">✓</div><div><strong>Order placed</strong><span>Nov 3, 2:14 PM</span></div></div>
+                <div class="od-tl-item done"><div class="od-tl-icon">✓</div><div><strong>Payment confirmed</strong><span>Nov 3, 2:15 PM</span></div></div>
+                <div class="od-tl-item active"><div class="od-tl-icon">🚚</div><div><strong>Shipped</strong><span>Nov 4, 9:15 AM</span></div></div>
+                <div class="od-tl-item"><div class="od-tl-icon">🏠</div><div><strong>Delivered</strong><span>Expected Nov 5–6</span></div></div>
+              </div>
+            </div>
+          </div>
+
+          <aside class="od-right">
+            <div class="a-card">
+              <div class="a-card-head"><h2>Customer</h2></div>
+              <div class="cust-card">
+                <img src="https://i.pravatar.cc/80?img=12" alt="" />
+                <div><strong>Alex Johnson</strong><span>alex@mail.com</span><span>+880 1712 345678</span></div>
+              </div>
+            </div>
+
+            <div class="a-card">
+              <div class="a-card-head"><h2>Vendors</h2></div>
+              <div style="display:flex;flex-direction:column;gap:10px">
+                <div class="vendor-cell"><img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=60&q=80" alt="" /><div><strong>TechZone</strong><span>$89.99</span></div></div>
+                <div class="vendor-cell"><img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=60&q=80" alt="" /><div><strong>GadgetPro</strong><span>$149.00</span></div></div>
+                <div class="vendor-cell"><img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=60&q=80" alt="" /><div><strong>Fashion Hub</strong><span>$45.00</span></div></div>
+              </div>
+            </div>
+
+            <div class="a-card">
+              <div class="a-card-head"><h2>Payment</h2></div>
+              <div class="pay-mini">
+                <span>💳 Credit Card</span>
+                <span>Visa •••• 4242</span>
+                <span class="st st--delivered">Paid</span>
+              </div>
+            </div>
+
+            <div class="a-card">
+              <div class="a-card-head"><h2>Price Breakdown</h2></div>
+              <div class="od-totals">
+                <div class="od-tot-row"><span>Subtotal</span><strong>$283.99</strong></div>
+                <div class="od-tot-row"><span>Shipping</span><strong style="color:var(--success)">Free</strong></div>
+                <div class="od-tot-row"><span>Tax</span><strong>$14.20</strong></div>
+                <div class="od-tot-row od-tot-row--total"><span>Total</span><strong>$298.19</strong></div>
+                <div class="od-tot-row" style="color:var(--danger);font-weight:600"><span>Platform Commission (10%)</span><strong>$29.82</strong></div>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="a-overlay" id="aOverlay"></div>
+  <script src="../assets/js/admin-shared.js"></script>
+  <script>
+    document.getElementById('invoiceBtn')?.addEventListener('click', () => showAToast('Invoice downloading...'));
+    document.getElementById('printBtn')?.addEventListener('click', () => window.print());
+  </script>
+</body>
+</html>

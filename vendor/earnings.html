@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Earnings — ShopHub Seller Center</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/css/global.css" />
+  <link rel="stylesheet" href="../assets/css/vendor-shared.css" />
+  <link rel="stylesheet" href="../assets/css/vendor-dashboard.css" />
+  <link rel="stylesheet" href="../assets/css/vendor-products.css" />
+  <link rel="stylesheet" href="../assets/css/vendor-earnings.css" />
+</head>
+<body class="vendor-body">
+  <div class="vendor-layout">
+    <aside class="v-sidebar" id="vSidebar">
+      <div class="v-brand"><a href="../index.html" class="logo">Shop<span>Hub</span></a><span class="v-brand-badge">Seller</span></div>
+      <div class="v-shop-mini"><img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=80&q=80" alt="Shop" /><div><strong>TechZone</strong><span>Active Shop</span></div></div>
+      <nav class="v-nav">
+        <a href="dashboard.html" class="v-link"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="9" rx="1"/><rect x="14" y="3" width="7" height="5" rx="1"/><rect x="14" y="12" width="7" height="9" rx="1"/><rect x="3" y="16" width="7" height="5" rx="1"/></svg>Dashboard</a>
+        <a href="products.html" class="v-link"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 7l-8-4-8 4 8 4 8-4z"/><path d="M4 7v10l8 4 8-4V7"/><path d="M12 11v10"/></svg>Products</a>
+        <a href="orders.html" class="v-link"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><path d="M3 6h18M16 10a4 4 0 0 1-8 0"/></svg>Orders<span class="v-badge">4</span></a>
+        <a href="earnings.html" class="v-link active"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>Earnings</a>
+        <a href="reviews.html" class="v-link"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>Reviews</a>
+        <div class="v-divider"></div>
+        <div class="v-nav-label">Settings</div>
+        <a href="shop-settings.html" class="v-link"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>Shop Settings</a>
+        <div class="v-divider"></div>
+        <a href="login.html" class="v-link v-link--danger" id="vLogout"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>Logout</a>
+      </nav>
+    </aside>
+
+    <div class="v-main">
+      <header class="v-topbar">
+        <button class="v-menu-toggle" id="vMenuToggle"><span></span><span></span><span></span></button>
+        <div class="v-search"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg><input type="text" placeholder="Search..." /></div>
+        <div class="v-topbar-right">
+          <button class="v-icon-btn"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></svg><span class="v-dot"></span></button>
+          <a href="shop-settings.html" class="v-user"><img src="https://i.pravatar.cc/80?img=12" alt="User" /><strong>John Doe</strong></a>
+        </div>
+      </header>
+
+      <div class="v-content">
+        <div class="v-pagehead">
+          <div><h1>Earnings</h1><p>Track your revenue and payout history</p></div>
+          <button class="btn btn--primary btn--sm" id="withdrawBtn">Request Payout</button>
+        </div>
+
+        <!-- Balance cards -->
+        <div class="bal-grid">
+          <div class="bal-card bal-card--primary">
+            <span class="bal-label">Available Balance</span>
+            <strong class="bal-value">$8,420.50</strong>
+            <span class="bal-sub">Ready to withdraw</span>
+          </div>
+          <div class="bal-card">
+            <span class="bal-label">Pending</span>
+            <strong class="bal-value">$1,240.00</strong>
+            <span class="bal-sub">From processing orders</span>
+          </div>
+          <div class="bal-card">
+            <span class="bal-label">This Month</span>
+            <strong class="bal-value">$4,680.75</strong>
+            <span class="bal-sub">↑ 12.4% vs last month</span>
+          </div>
+          <div class="bal-card">
+            <span class="bal-label">Lifetime</span>
+            <strong class="bal-value">$24,860.00</strong>
+            <span class="bal-sub">Total earned</span>
+          </div>
+        </div>
+
+        <!-- Chart -->
+        <div class="v-card">
+          <div class="v-card-head">
+            <h2>Earnings Overview</h2>
+            <select class="mini-select"><option>Last 7 days</option><option>Last 30 days</option></select>
+          </div>
+          <div class="chart-placeholder" style="height:240px">
+            <div class="chart-bars">
+              <div class="cbar" style="height:55%"><span>Mon</span></div>
+              <div class="cbar" style="height:75%"><span>Tue</span></div>
+              <div class="cbar" style="height:65%"><span>Wed</span></div>
+              <div class="cbar" style="height:85%"><span>Thu</span></div>
+              <div class="cbar" style="height:70%"><span>Fri</span></div>
+              <div class="cbar" style="height:95%"><span>Sat</span></div>
+              <div class="cbar" style="height:80%"><span>Sun</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Payout history -->
+        <div class="v-card">
+          <div class="v-card-head">
+            <h2>Payout History</h2>
+            <select class="mini-select"><option>All</option><option>Completed</option><option>Pending</option></select>
+          </div>
+          <div class="v-table-wrap">
+            <table class="v-table">
+              <thead>
+                <tr><th>Payout ID</th><th>Date</th><th>Method</th><th>Amount</th><th>Status</th><th></th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>#PO-1204</strong></td>
+                  <td>Nov 1, 2026</td>
+                  <td>bKash</td>
+                  <td><strong>$2,450.00</strong></td>
+                  <td><span class="st st--delivered">Completed</span></td>
+                  <td><a href="#" class="link">Receipt</a></td>
+                </tr>
+                <tr>
+                  <td><strong>#PO-1180</strong></td>
+                  <td>Oct 15, 2026</td>
+                  <td>Bank Transfer</td>
+                  <td><strong>$1,890.00</strong></td>
+                  <td><span class="st st--delivered">Completed</span></td>
+                  <td><a href="#" class="link">Receipt</a></td>
+                </tr>
+                <tr>
+                  <td><strong>#PO-1156</strong></td>
+                  <td>Oct 1, 2026</td>
+                  <td>bKash</td>
+                  <td><strong>$3,120.50</strong></td>
+                  <td><span class="st st--delivered">Completed</span></td>
+                  <td><a href="#" class="link">Receipt</a></td>
+                </tr>
+                <tr>
+                  <td><strong>#PO-1302</strong></td>
+                  <td>Nov 5, 2026</td>
+                  <td>Bank Transfer</td>
+                  <td><strong>$1,240.00</strong></td>
+                  <td><span class="st st--processing">Pending</span></td>
+                  <td><a href="#" class="link">Track</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Withdraw modal -->
+  <div class="v-modal-overlay" id="withdrawModal">
+    <div class="v-modal">
+      <div class="v-modal-head"><h2>Request Payout</h2><button class="v-modal-close" id="wmClose">✕</button></div>
+      <div class="v-modal-body">
+        <p style="font-size:13px;color:var(--text-muted)">Available: <strong style="color:var(--text)">$8,420.50</strong></p>
+        <div class="field"><label>Amount ($)</label><input type="number" id="wmAmount" value="1000" /></div>
+        <div class="field"><label>Payout method</label>
+          <select id="wmMethod">
+            <option>bKash</option><option>Nagad</option><option>Bank Transfer</option>
+          </select>
+        </div>
+        <p style="font-size:11px;color:var(--text-muted)">Payouts are processed within 2-3 business days. Minimum: $50.</p>
+      </div>
+      <div class="v-modal-actions">
+        <button class="btn btn--ghost btn--sm" id="wmCancel">Cancel</button>
+        <button class="btn btn--primary btn--sm" id="wmConfirm">Request Payout</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="v-overlay" id="vOverlay"></div>
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/vendor-shared.js"></script>
+  <script>
+    const wm = document.getElementById('withdrawModal');
+    document.getElementById('withdrawBtn')?.addEventListener('click', () => wm.classList.add('show'));
+    document.getElementById('wmClose')?.addEventListener('click', () => wm.classList.remove('show'));
+    document.getElementById('wmCancel')?.addEventListener('click', () => wm.classList.remove('show'));
+    document.getElementById('wmConfirm')?.addEventListener('click', () => {
+      const amt = document.getElementById('wmAmount').value;
+      if (!amt || amt < 50) { showVToast('Minimum payout is $50'); return; }
+      wm.classList.remove('show');
+      showVToast('Payout request submitted');
+    });
+  </script>
+</body>
+</html>

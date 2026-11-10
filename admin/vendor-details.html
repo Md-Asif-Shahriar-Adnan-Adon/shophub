@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vendor Detail — ShopHub Admin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/css/global.css" />
+  <link rel="stylesheet" href="../assets/css/admin-shared.css" />
+  <link rel="stylesheet" href="../assets/css/admin-vendors.css" />
+  <link rel="stylesheet" href="../assets/css/admin-vendor-detail.css" />
+</head>
+<body class="admin-body">
+  <div class="admin-layout">
+    <aside class="a-sidebar" id="aSidebar">
+      <div class="a-brand"><a href="../index.html" class="logo">Shop<span>Hub</span></a><span class="a-brand-badge">Admin</span></div>
+      <div class="a-admin-mini"><img src="https://i.pravatar.cc/80?img=68" alt="" /><div><strong>Super Admin</strong><span>admin@shophub.com</span></div></div>
+      <nav class="a-nav">
+        <a href="dashboard.html" class="a-link"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="9" rx="1"/><rect x="14" y="3" width="7" height="5" rx="1"/><rect x="14" y="12" width="7" height="9" rx="1"/><rect x="3" y="16" width="7" height="5" rx="1"/></svg>Dashboard</a>
+        <a href="vendors.html" class="a-link active"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>Vendors</a>
+        <a href="products.html" class="a-link"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 7l-8-4-8 4 8 4 8-4z"/><path d="M4 7v10l8 4 8-4V7"/><path d="M12 11v10"/></svg>Products</a>
+        <a href="orders.html" class="a-link"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><path d="M3 6h18M16 10a4 4 0 0 1-8 0"/></svg>Orders</a>
+        <a href="payouts.html" class="a-link"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>Payouts<span class="a-badge">3</span></a>
+        <a href="customers.html" class="a-link"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>Customers</a>
+        <div class="a-divider"></div>
+        <div class="a-nav-label">System</div>
+        <a href="categories.html" class="a-link"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>Categories</a>
+        <a href="settings.html" class="a-link"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>Settings</a>
+        <div class="a-divider"></div>
+        <a href="login.html" class="a-link a-link--danger" id="aLogout"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>Logout</a>
+      </nav>
+    </aside>
+
+    <div class="a-main">
+      <header class="a-topbar">
+        <button class="a-menu-toggle" id="aMenuToggle"><span></span><span></span><span></span></button>
+        <div class="a-search"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg><input type="text" placeholder="Search..." /></div>
+        <div class="a-topbar-right">
+          <button class="a-icon-btn"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></svg><span class="a-dot"></span></button>
+          <a href="settings.html" class="a-user"><img src="https://i.pravatar.cc/80?img=68" alt="" /><strong>Admin</strong></a>
+        </div>
+      </header>
+
+      <div class="a-content">
+        <div class="a-pagehead">
+          <div>
+            <a href="vendors.html" class="link" style="font-size:12px">← Back to Vendors</a>
+            <h1 style="margin-top:6px">TechZone</h1>
+            <p>Vendor details, products, orders and performance</p>
+          </div>
+          <div style="display:flex;gap:8px;flex-wrap:wrap">
+            <button class="btn btn--ghost btn--sm" id="suspendBtn">Suspend Vendor</button>
+            <button class="btn btn--primary btn--sm">Contact Vendor</button>
+          </div>
+        </div>
+
+        <!-- Profile hero -->
+        <div class="a-card vd-hero">
+          <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=200&q=80" alt="" class="vd-logo" />
+          <div class="vd-info">
+            <div class="vd-title">
+              <h2>TechZone</h2>
+              <span class="st st--approved">Approved</span>
+            </div>
+            <p class="vd-sub">Premium electronics & gadgets — trusted by 50,000+ customers.</p>
+            <div class="vd-meta">
+              <span>📧 john@techzone.com</span>
+              <span>📞 +880 1712 345678</span>
+              <span>📍 Dhaka, Bangladesh</span>
+              <span>🗓 Joined Jan 2019</span>
+            </div>
+          </div>
+          <div class="vd-stats">
+            <div><strong>248</strong><span>Products</span></div>
+            <div><strong>1,248</strong><span>Orders</span></div>
+            <div><strong>4.8★</strong><span>Rating</span></div>
+            <div><strong>$24,860</strong><span>Revenue</span></div>
+          </div>
+        </div>
+
+        <!-- Tabs -->
+        <div class="vd-tabs">
+          <button class="vd-tab active" data-tab="overview">Overview</button>
+          <button class="vd-tab" data-tab="products">Products</button>
+          <button class="vd-tab" data-tab="orders">Orders</button>
+          <button class="vd-tab" data-tab="payouts">Payouts</button>
+          <button class="vd-tab" data-tab="documents">Documents</button>
+        </div>
+
+        <!-- Overview -->
+        <div class="vd-panel active" id="vd-overview">
+          <div class="g-2">
+            <div class="a-card">
+              <div class="a-card-head"><h2>Performance</h2></div>
+              <div class="perf-list">
+                <div class="perf-row"><span>Order fulfillment rate</span><strong>98.2%</strong></div>
+                <div class="perf-row"><span>On-time delivery</span><strong>96.5%</strong></div>
+                <div class="perf-row"><span>Response time</span><strong>&lt; 2h</strong></div>
+                <div class="perf-row"><span>Positive feedback</span><strong>99%</strong></div>
+                <div class="perf-row"><span>Return rate</span><strong>1.2%</strong></div>
+              </div>
+            </div>
+            <div class="a-card">
+              <div class="a-card-head"><h2>Commission Settings</h2></div>
+              <div class="comm-list">
+                <div class="comm-row"><span>Platform commission</span><strong>10%</strong></div>
+                <div class="comm-row"><span>Payment gateway fee</span><strong>2.5%</strong></div>
+                <div class="comm-row"><span>Net vendor share</span><strong style="color:var(--success)">87.5%</strong></div>
+              </div>
+              <button class="btn btn--ghost btn--sm" style="margin-top:16px">Edit Commission</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Products -->
+        <div class="vd-panel" id="vd-products">
+          <div class="a-card">
+            <div class="a-table-wrap">
+              <table class="a-table">
+                <thead><tr><th>Product</th><th>Price</th><th>Stock</th><th>Sold</th><th>Status</th></tr></thead>
+                <tbody>
+                  <tr>
+                    <td><div class="vendor-cell"><img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=60&q=80" alt="" /><div><strong>Wireless Headphones Pro</strong><span>SKU: WH-001</span></div></div></td>
+                    <td><strong>$89.99</strong></td>
+                    <td>45</td>
+                    <td>128</td>
+                    <td><span class="st st--active">Active</span></td>
+                  </tr>
+                  <tr>
+                    <td><div class="vendor-cell"><img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=60&q=80" alt="" /><div><strong>MacBook Air M2</strong><span>SKU: MB-002</span></div></div></td>
+                    <td><strong>$999.00</strong></td>
+                    <td>12</td>
+                    <td>62</td>
+                    <td><span class="st st--active">Active</span></td>
+                  </tr>
+                  <tr>
+                    <td><div class="vendor-cell"><img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=60&q=80" alt="" /><div><strong>Smart Watch Series 5</strong><span>SKU: SW-003</span></div></div></td>
+                    <td><strong>$149.00</strong></td>
+                    <td>0</td>
+                    <td>86</td>
+                    <td><span class="st st--draft">Out of Stock</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- Orders -->
+        <div class="vd-panel" id="vd-orders">
+          <div class="a-card">
+            <div class="a-table-wrap">
+              <table class="a-table">
+                <thead><tr><th>Order</th><th>Customer</th><th>Date</th><th>Total</th><th>Status</th></tr></thead>
+                <tbody>
+                  <tr><td><strong>#48392</strong></td><td>Alex Johnson</td><td>Nov 3, 2026</td><td><strong>$298.19</strong></td><td><span class="st st--shipped">Shipped</span></td></tr>
+                  <tr><td><strong>#48214</strong></td><td>Maria Chen</td><td>Oct 28, 2026</td><td><strong>$149.00</strong></td><td><span class="st st--delivered">Delivered</span></td></tr>
+                  <tr><td><strong>#48102</strong></td><td>Sam Rahman</td><td>Oct 22, 2026</td><td><strong>$88.00</strong></td><td><span class="st st--processing">Processing</span></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- Payouts -->
+        <div class="vd-panel" id="vd-payouts">
+          <div class="a-card">
+            <div class="a-table-wrap">
+              <table class="a-table">
+                <thead><tr><th>Payout ID</th><th>Date</th><th>Method</th><th>Amount</th><th>Status</th></tr></thead>
+                <tbody>
+                  <tr><td><strong>#PO-1204</strong></td><td>Nov 1, 2026</td><td>bKash</td><td><strong>$2,450.00</strong></td><td><span class="st st--delivered">Completed</span></td></tr>
+                  <tr><td><strong>#PO-1180</strong></td><td>Oct 15, 2026</td><td>Bank</td><td><strong>$1,890.00</strong></td><td><span class="st st--delivered">Completed</span></td></tr>
+                  <tr><td><strong>#PO-1302</strong></td><td>Nov 5, 2026</td><td>Bank</td><td><strong>$1,240.00</strong></td><td><span class="st st--processing">Pending</span></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- Documents -->
+        <div class="vd-panel" id="vd-documents">
+          <div class="g-2">
+            <div class="a-card">
+              <div class="a-card-head"><h2>National ID</h2><span class="st st--approved">Verified</span></div>
+              <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=400&q=80" alt="NID" style="width:100%;border-radius:8px;border:1px solid var(--border)" />
+            </div>
+            <div class="a-card">
+              <div class="a-card-head"><h2>Trade License</h2><span class="st st--approved">Verified</span></div>
+              <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=400&q=80" alt="License" style="width:100%;border-radius:8px;border:1px solid var(--border)" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="a-overlay" id="aOverlay"></div>
+  <script src="../assets/js/admin-shared.js"></script>
+  <script>
+    document.querySelectorAll('.vd-tab').forEach(tab => {
+      tab.addEventListener('click', () => {
+        document.querySelectorAll('.vd-tab').forEach(t => t.classList.remove('active'));
+        document.querySelectorAll('.vd-panel').forEach(p => p.classList.remove('active'));
+        tab.classList.add('active');
+        document.getElementById('vd-' + tab.dataset.tab)?.classList.add('active');
+      });
+    });
+    document.getElementById('suspendBtn')?.addEventListener('click', () => {
+      if (confirm('Suspend this vendor?')) showAToast('Vendor suspended');
+    });
+  </script>
+</body>
+</html>

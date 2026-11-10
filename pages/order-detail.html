@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Order #SH-2026-48392 — ShopHub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/css/global.css" />
+  <link rel="stylesheet" href="../assets/css/account.css" />
+  <link rel="stylesheet" href="../assets/css/order-detail.css" />
+</head>
+<body>
+
+  <!-- ================= HEADER ================= -->
+  <header class="header">
+    <div class="container header__inner">
+      <a href="../index.html" class="logo">Shop<span>Hub</span></a>
+      <div class="search">
+        <input type="text" placeholder="Search products, brands, vendors..." />
+        <button class="search__btn" aria-label="Search">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/>
+          </svg>
+        </button>
+      </div>
+      <nav class="header__actions">
+        <a href="cart.html" class="icon-btn" aria-label="Cart">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/>
+            <path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"/>
+          </svg>
+          <span class="badge">3</span>
+        </a>
+        <a href="account.html" class="icon-btn" aria-label="Account">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="8" r="4"/><path d="M4 21v-2a6 6 0 0 1 6-6h4a6 6 0 0 1 6 6v2"/>
+          </svg>
+        </a>
+      </nav>
+      <button class="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ================= BREADCRUMB ================= -->
+  <div class="breadcrumb-bar">
+    <div class="container">
+      <nav class="breadcrumb">
+        <a href="../index.html">Home</a> <span>/</span>
+        <a href="account.html">My Account</a> <span>/</span>
+        <a href="orders.html">Orders</a> <span>/</span>
+        <strong>#SH-2026-48392</strong>
+      </nav>
+    </div>
+  </div>
+
+  <!-- ================= ORDER DETAIL ================= -->
+  <main class="container order-detail-page">
+
+    <!-- Order header -->
+    <section class="order-header">
+      <div class="order-header__left">
+        <h1>Order #SH-2026-48392</h1>
+        <p class="muted">Placed on Nov 3, 2026 at 2:14 PM</p>
+      </div>
+      <div class="order-header__right">
+        <span class="status status--shipped">Shipped</span>
+        <a href="orders.html" class="link">← Back to orders</a>
+      </div>
+    </section>
+
+    <!-- ========== TIMELINE ========== -->
+    <section class="timeline-card">
+      <h2>Order Status</h2>
+
+      <div class="track-timeline">
+        <div class="track-step done">
+          <div class="track-icon">✓</div>
+          <div class="track-body">
+            <strong>Order Placed</strong>
+            <span>Nov 3, 2:14 PM</span>
+          </div>
+        </div>
+
+        <div class="track-step done">
+          <div class="track-icon">✓</div>
+          <div class="track-body">
+            <strong>Confirmed</strong>
+            <span>Nov 3, 2:30 PM</span>
+          </div>
+        </div>
+
+        <div class="track-step done">
+          <div class="track-icon">✓</div>
+          <div class="track-body">
+            <strong>Shipped</strong>
+            <span>Nov 4, 9:15 AM</span>
+          </div>
+        </div>
+
+        <div class="track-step active">
+          <div class="track-icon">🚚</div>
+          <div class="track-body">
+            <strong>Out for Delivery</strong>
+            <span>Expected Nov 5</span>
+          </div>
+        </div>
+
+        <div class="track-step">
+          <div class="track-icon">🏠</div>
+          <div class="track-body">
+            <strong>Delivered</strong>
+            <span>Expected Nov 5–6</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tracking info -->
+      <div class="tracking-info">
+        <div>
+          <span>Tracking number</span>
+          <strong>SH-TRK-892746512</strong>
+        </div>
+        <div>
+          <span>Carrier</span>
+          <strong>ShopHub Express</strong>
+        </div>
+        <a href="#" class="btn btn--ghost btn--sm">Track Package →</a>
+      </div>
+    </section>
+
+    <!-- ========== LAYOUT ========== -->
+    <div class="order-detail-grid">
+
+      <!-- LEFT: Items -->
+      <div class="order-detail-left">
+
+        <section class="panel">
+          <div class="panel__head">
+            <h2>Items (3)</h2>
+            <span class="muted">3 items in this order</span>
+          </div>
+
+          <!-- Item 1 -->
+          <div class="order-product">
+            <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=160&q=80" alt="Headphones" />
+            <div class="order-product__info">
+              <a href="product-detail.html" class="vendor-tag">TechZone</a>
+              <h3>Wireless Headphones Pro</h3>
+              <p>Color: Black • Size: Large</p>
+              <div class="order-product__actions">
+                <a href="product-detail.html" class="link-sm">View product</a>
+                <a href="#" class="link-sm">Buy again</a>
+              </div>
+            </div>
+            <div class="order-product__meta">
+              <span>Qty: 1</span>
+              <strong>$89.99</strong>
+            </div>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="order-product">
+            <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=160&q=80" alt="Watch" />
+            <div class="order-product__info">
+              <a href="product-detail.html" class="vendor-tag">GadgetPro</a>
+              <h3>Smart Watch Series 5</h3>
+              <p>Color: Silver • Size: 44mm</p>
+              <div class="order-product__actions">
+                <a href="product-detail.html" class="link-sm">View product</a>
+                <a href="#" class="link-sm">Buy again</a>
+              </div>
+            </div>
+            <div class="order-product__meta">
+              <span>Qty: 1</span>
+              <strong>$149.00</strong>
+            </div>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="order-product">
+            <img src="https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=160&q=80" alt="Sunglasses" />
+            <div class="order-product__info">
+              <a href="product-detail.html" class="vendor-tag">Fashion Hub</a>
+              <h3>Classic Aviator Sunglasses</h3>
+              <p>Color: Gold • Size: One Size</p>
+              <div class="order-product__actions">
+                <a href="product-detail.html" class="link-sm">View product</a>
+                <a href="#" class="link-sm">Buy again</a>
+              </div>
+            </div>
+            <div class="order-product__meta">
+              <span>Qty: 1</span>
+              <strong>$45.00</strong>
+            </div>
+          </div>
+        </section>
+
+        <!-- Delivery address + payment -->
+        <div class="two-col-info">
+
+          <section class="panel">
+            <div class="panel__head">
+              <h2>Delivery Address</h2>
+            </div>
+            <div class="info-card">
+              <div class="info-card__icon">📍</div>
+              <div>
+                <strong>John Doe</strong>
+                <p>House 12, Road 5, Dhanmondi</p>
+                <p>Dhaka, 1207, Bangladesh</p>
+                <p>+880 1712 345678</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="panel">
+            <div class="panel__head">
+              <h2>Payment Method</h2>
+            </div>
+            <div class="info-card">
+              <div class="info-card__icon">💳</div>
+              <div>
+                <strong>Credit Card •••• 4242</strong>
+                <p>Visa ending in 4242</p>
+                <p class="paid-tag">✓ Paid on Nov 3, 2026</p>
+              </div>
+            </div>
+          </section>
+
+        </div>
+
+      </div>
+
+      <!-- RIGHT: Price breakdown + actions -->
+      <aside class="order-detail-right">
+
+        <section class="panel">
+          <h2>Price Details</h2>
+
+          <div class="price-rows">
+            <div class="price-row">
+              <span>Subtotal</span>
+              <strong>$283.99</strong>
+            </div>
+            <div class="price-row">
+              <span>Shipping</span>
+              <strong class="free">Free</strong>
+            </div>
+            <div class="price-row">
+              <span>Tax (5%)</span>
+              <strong>$14.20</strong>
+            </div>
+            <div class="price-row price-row--discount">
+              <span>Discount</span>
+              <strong>-$0.00</strong>
+            </div>
+            <div class="price-row price-row--total">
+              <span>Total Paid</span>
+              <strong>$298.19</strong>
+            </div>
+          </div>
+
+          <div class="price-note">
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/>
+            </svg>
+            Paid with Credit Card on Nov 3, 2026
+          </div>
+        </section>
+
+        <section class="panel">
+          <h2>Actions</h2>
+
+          <div class="action-buttons">
+            <button class="btn btn--ghost btn--block" id="invoiceBtn">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+              </svg>
+              Download Invoice
+            </button>
+            <button class="btn btn--ghost btn--block" id="returnBtn">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M9 14 4 9l5-5"/><path d="M4 9h10.5a5.5 5.5 0 0 1 5.5 5.5v0a5.5 5.5 0 0 1-5.5 5.5H11"/>
+              </svg>
+              Request Return
+            </button>
+            <a href="../public/contact.html" class="btn btn--ghost btn--block">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+              </svg>
+              Need Help?
+            </a>
+          </div>
+        </section>
+
+        <!-- Help card -->
+        <section class="help-card">
+          <h3>Need help with this order?</h3>
+          <p>Our support team is available 24/7.</p>
+          <a href="../public/contact.html" class="btn btn--primary btn--block btn--sm">Contact Support</a>
+        </section>
+
+      </aside>
+    </div>
+
+  </main>
+
+  <!-- ================= FOOTER (simplified) ================= -->
+  <footer class="footer">
+    <div class="footer__bottom">
+      <p>© 2026 ShopHub. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/order-detail.js"></script>
+</body>
+</html>

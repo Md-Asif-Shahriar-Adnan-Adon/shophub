@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reviews — ShopHub Seller Center</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/css/global.css" />
+  <link rel="stylesheet" href="../assets/css/vendor-shared.css" />
+  <link rel="stylesheet" href="../assets/css/vendor-dashboard.css" />
+  <link rel="stylesheet" href="../assets/css/vendor-reviews.css" />
+</head>
+<body class="vendor-body">
+  <div class="vendor-layout">
+    <aside class="v-sidebar" id="vSidebar">
+      <div class="v-brand"><a href="../index.html" class="logo">Shop<span>Hub</span></a><span class="v-brand-badge">Seller</span></div>
+      <div class="v-shop-mini"><img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=80&q=80" alt="Shop" /><div><strong>TechZone</strong><span>Active Shop</span></div></div>
+      <nav class="v-nav">
+        <a href="dashboard.html" class="v-link"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="9" rx="1"/><rect x="14" y="3" width="7" height="5" rx="1"/><rect x="14" y="12" width="7" height="9" rx="1"/><rect x="3" y="16" width="7" height="5" rx="1"/></svg>Dashboard</a>
+        <a href="products.html" class="v-link"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 7l-8-4-8 4 8 4 8-4z"/><path d="M4 7v10l8 4 8-4V7"/><path d="M12 11v10"/></svg>Products</a>
+        <a href="orders.html" class="v-link"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><path d="M3 6h18M16 10a4 4 0 0 1-8 0"/></svg>Orders<span class="v-badge">4</span></a>
+        <a href="earnings.html" class="v-link"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>Earnings</a>
+        <a href="reviews.html" class="v-link active"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>Reviews</a>
+        <div class="v-divider"></div>
+        <div class="v-nav-label">Settings</div>
+        <a href="shop-settings.html" class="v-link"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>Shop Settings</a>
+        <div class="v-divider"></div>
+        <a href="login.html" class="v-link v-link--danger" id="vLogout"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>Logout</a>
+      </nav>
+    </aside>
+
+    <div class="v-main">
+      <header class="v-topbar">
+        <button class="v-menu-toggle" id="vMenuToggle"><span></span><span></span><span></span></button>
+        <div class="v-search"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg><input type="text" placeholder="Search reviews..." /></div>
+        <div class="v-topbar-right">
+          <button class="v-icon-btn"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></svg><span class="v-dot"></span></button>
+          <a href="shop-settings.html" class="v-user"><img src="https://i.pravatar.cc/80?img=12" alt="User" /><strong>John Doe</strong></a>
+        </div>
+      </header>
+
+      <div class="v-content">
+        <div class="v-pagehead">
+          <div><h1>Reviews</h1><p>Manage customer reviews for your products</p></div>
+        </div>
+
+        <!-- Summary -->
+        <div class="rev-summary">
+          <div class="rev-score">
+            <strong>4.8</strong>
+            <span class="rev-stars">★★★★★</span>
+            <p>Based on 1,248 reviews</p>
+          </div>
+          <div class="rev-bars">
+            <div class="rb-row"><span>5 ★</span><div class="rb"><i style="width:82%"></i></div><em>82%</em></div>
+            <div class="rb-row"><span>4 ★</span><div class="rb"><i style="width:12%"></i></div><em>12%</em></div>
+            <div class="rb-row"><span>3 ★</span><div class="rb"><i style="width:4%"></i></div><em>4%</em></div>
+            <div class="rb-row"><span>2 ★</span><div class="rb"><i style="width:1%"></i></div><em>1%</em></div>
+            <div class="rb-row"><span>1 ★</span><div class="rb"><i style="width:1%"></i></div><em>1%</em></div>
+          </div>
+        </div>
+
+        <!-- Filters -->
+        <div class="v-card" style="padding: 12px 16px; margin-bottom: 16px">
+          <div class="filter-row">
+            <div class="filter-tabs">
+              <button class="ftab active">All Reviews <span>1,248</span></button>
+              <button class="ftab">Unanswered <span>12</span></button>
+              <button class="ftab">5 ★</button>
+              <button class="ftab">4 ★</button>
+              <button class="ftab">Lower ★</button>
+            </div>
+            <select class="mini-select"><option>Sort: Newest</option><option>Sort: Oldest</option><option>Sort: Highest rating</option></select>
+          </div>
+        </div>
+
+        <!-- Reviews list -->
+        <div class="rev-list">
+          <div class="v-card rev-item">
+            <div class="rev-head">
+              <img src="https://i.pravatar.cc/60?img=12" alt="" />
+              <div class="rev-meta">
+                <strong>Alex Johnson</strong>
+                <span class="rev-stars small">★★★★★</span>
+                <span>2 weeks ago</span>
+              </div>
+              <div class="rev-product-tag">Wireless Headphones Pro</div>
+            </div>
+            <p class="rev-text">Amazing sound quality! The noise cancellation is a game changer. Battery lasts forever. Fast delivery from TechZone too.</p>
+            <div class="rev-actions">
+              <span class="rev-helpful">👍 24 helpful</span>
+              <button class="btn btn--ghost btn--sm" onclick="document.getElementById('replyBox-1').hidden = !document.getElementById('replyBox-1').hidden">Reply</button>
+            </div>
+            <div class="reply-box" id="replyBox-1" hidden>
+              <textarea placeholder="Write your reply..."></textarea>
+              <div style="display:flex;gap:8px;justify-content:flex-end;margin-top:8px">
+                <button class="btn btn--ghost btn--sm" onclick="document.getElementById('replyBox-1').hidden = true">Cancel</button>
+                <button class="btn btn--primary btn--sm" onclick="showVToast('Reply posted');document.getElementById('replyBox-1').hidden = true">Post Reply</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="v-card rev-item">
+            <div class="rev-head">
+              <img src="https://i.pravatar.cc/60?img=32" alt="" />
+              <div class="rev-meta">
+                <strong>Maria Chen</strong>
+                <span class="rev-stars small">★★★★★</span>
+                <span>1 month ago</span>
+              </div>
+              <div class="rev-product-tag">Smart Watch Series 5</div>
+            </div>
+            <p class="rev-text">Very comfortable for long sessions. Bass is deep but not overwhelming. Great customer service!</p>
+            <div class="rev-actions">
+              <span class="rev-helpful">👍 18 helpful</span>
+              <button class="btn btn--ghost btn--sm" onclick="document.getElementById('replyBox-2').hidden = !document.getElementById('replyBox-2').hidden">Reply</button>
+            </div>
+            <div class="reply-box" id="replyBox-2" hidden>
+              <textarea placeholder="Write your reply..."></textarea>
+              <div style="display:flex;gap:8px;justify-content:flex-end;margin-top:8px">
+                <button class="btn btn--ghost btn--sm" onclick="document.getElementById('replyBox-2').hidden = true">Cancel</button>
+                <button class="btn btn--primary btn--sm" onclick="showVToast('Reply posted');document.getElementById('replyBox-2').hidden = true">Post Reply</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="v-card rev-item">
+            <div class="rev-head">
+              <img src="https://i.pravatar.cc/60?img=45" alt="" />
+              <div class="rev-meta">
+                <strong>Sam Rahman</strong>
+                <span class="rev-stars small">★★★★☆</span>
+                <span>1 month ago</span>
+              </div>
+              <div class="rev-product-tag">Bluetooth Speaker Mini</div>
+            </div>
+            <p class="rev-text">Product quality is great. Delivery took a day longer than expected but overall a good experience.</p>
+            <div class="rev-actions">
+              <span class="rev-helpful">👍 9 helpful</span>
+              <button class="btn btn--ghost btn--sm" onclick="document.getElementById('replyBox-3').hidden = !document.getElementById('replyBox-3').hidden">Reply</button>
+            </div>
+            <div class="reply-box" id="replyBox-3" hidden>
+              <textarea placeholder="Write your reply..."></textarea>
+              <div style="display:flex;gap:8px;justify-content:flex-end;margin-top:8px">
+                <button class="btn btn--ghost btn--sm" onclick="document.getElementById('replyBox-3').hidden = true">Cancel</button>
+                <button class="btn btn--primary btn--sm" onclick="showVToast('Reply posted');document.getElementById('replyBox-3').hidden = true">Post Reply</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="v-overlay" id="vOverlay"></div>
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/vendor-shared.js"></script>
+</body>
+</html>

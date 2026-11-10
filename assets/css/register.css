@@ -1,0 +1,253 @@
+/* ================= AUTH LAYOUT (REGISTER) ================= */
+.auth {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: calc(100vh - 72px);
+  background: #fff;
+}
+
+/* Register e image bame, form dane — login er ulta */
+.auth--register .auth__side { order: 1; }
+.auth--register .auth__card { order: 2; }
+
+/* ---------- LEFT: Image Side ---------- */
+.auth__side {
+  position: relative;
+  overflow: hidden;
+  background: #111827;
+}
+.auth__side img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: .5;
+}
+.auth__side-content {
+  position: absolute;
+  inset: 0;
+  padding: 60px 48px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.auth__side-content h2 {
+  font-size: 30px;
+  margin-bottom: 12px;
+  line-height: 1.2;
+}
+.auth__side-content > p {
+  font-size: 14px;
+  opacity: .9;
+  line-height: 1.6;
+  margin-bottom: 22px;
+}
+.auth__perks {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.auth__perks li {
+  font-size: 14px;
+  background: rgba(255,255,255,.1);
+  padding: 10px 14px;
+  border-radius: var(--radius-sm);
+  backdrop-filter: blur(4px);
+}
+
+/* ---------- RIGHT: Form Side ---------- */
+.auth__card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 24px;
+  overflow-y: auto;
+}
+.auth__inner { width: 100%; max-width: 420px; }
+
+.auth__brand { text-align: center; margin-bottom: 24px; }
+.auth__brand .logo { font-size: 26px; }
+
+.auth__card h1 {
+  font-size: 26px;
+  margin-bottom: 8px;
+  text-align: center;
+}
+.auth__sub {
+  color: var(--text-muted);
+  font-size: 14px;
+  text-align: center;
+  margin-bottom: 26px;
+}
+
+/* ---------- Form ---------- */
+.auth__form { display: flex; flex-direction: column; gap: 16px; }
+
+.field { display: flex; flex-direction: column; gap: 6px; }
+.field label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text);
+}
+.field input[type="text"],
+.field input[type="email"],
+.field input[type="password"] {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-sm);
+  font-size: 14px;
+  outline: none;
+  transition: border-color .2s;
+  background: #fff;
+}
+.field input:focus { border-color: var(--primary); }
+
+/* Error state */
+.field.error input { border-color: var(--danger); }
+.field__error {
+  font-size: 12px;
+  color: var(--danger);
+  display: none;
+}
+.field.error .field__error { display: block; }
+
+/* Password wrap */
+.password-wrap { position: relative; }
+.password-wrap input { padding-right: 44px; }
+.password-toggle {
+  position: absolute;
+  right: 6px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  color: var(--text-muted);
+  transition: background .2s;
+}
+.password-toggle:hover { background: var(--bg); }
+
+/* ---------- Password strength meter ---------- */
+.strength {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 4px;
+}
+.strength__bars {
+  display: flex;
+  gap: 4px;
+  flex: 1;
+}
+.strength__bars span {
+  flex: 1;
+  height: 5px;
+  background: var(--border);
+  border-radius: 999px;
+  transition: background .25s;
+}
+.strength__label {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-muted);
+  min-width: 70px;
+  text-align: right;
+}
+
+/* Strength levels */
+.strength[data-level="1"] .strength__bars span:nth-child(1) { background: var(--danger); }
+.strength[data-level="1"] .strength__label { color: var(--danger); }
+
+.strength[data-level="2"] .strength__bars span:nth-child(-n+2) { background: var(--secondary); }
+.strength[data-level="2"] .strength__label { color: var(--secondary); }
+
+.strength[data-level="3"] .strength__bars span:nth-child(-n+3) { background: #84CC16; }
+.strength[data-level="3"] .strength__label { color: #65A30D; }
+
+.strength[data-level="4"] .strength__bars span { background: var(--success); }
+.strength[data-level="4"] .strength__label { color: var(--success-dark); }
+
+/* ---------- Terms checkbox ---------- */
+.field--terms .check {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--text-muted);
+  cursor: pointer;
+}
+.field--terms .check input {
+  accent-color: var(--primary);
+  margin-top: 3px;
+  flex-shrink: 0;
+}
+.field--terms .check a { font-weight: 600; }
+
+/* ---------- Divider ---------- */
+.divider {
+  position: relative;
+  text-align: center;
+  margin: 22px 0 16px;
+}
+.divider::before {
+  content: '';
+  position: absolute;
+  left: 0; right: 0; top: 50%;
+  height: 1px;
+  background: var(--border);
+}
+.divider span {
+  position: relative;
+  background: #fff;
+  padding: 0 12px;
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+/* ---------- Social ---------- */
+.socials { display: flex; gap: 10px; }
+.social-btn {
+  flex: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 11px;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-sm);
+  font-size: 14px;
+  font-weight: 600;
+  background: #fff;
+  color: var(--text);
+  transition: all .2s;
+}
+.social-btn:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.auth__foot {
+  text-align: center;
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-top: 22px;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 900px) {
+  .auth { grid-template-columns: 1fr; }
+  .auth__side { display: none; }
+  .auth__card { padding: 40px 20px; }
+  .auth__card h1 { font-size: 22px; }
+}
+
+@media (max-width: 420px) {
+  .socials { flex-direction: column; }
+  .strength { flex-direction: column; align-items: flex-start; gap: 6px; }
+  .strength__label { text-align: left; }
+}

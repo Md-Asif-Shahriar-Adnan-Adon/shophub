@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Wishlist — ShopHub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/css/global.css" />
+  <link rel="stylesheet" href="../assets/css/account.css" />
+  <link rel="stylesheet" href="../assets/css/wishlist.css" />
+</head>
+<body>
+
+  <!-- ================= HEADER ================= -->
+  <header class="header">
+    <div class="container header__inner">
+      <a href="../index.html" class="logo">Shop<span>Hub</span></a>
+      <div class="search">
+        <input type="text" placeholder="Search products, brands, vendors..." />
+        <button class="search__btn" aria-label="Search">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/>
+          </svg>
+        </button>
+      </div>
+      <nav class="header__actions">
+        <a href="wishlist.html" class="icon-btn active" aria-label="Wishlist">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"/>
+          </svg>
+          <span class="badge">5</span>
+        </a>
+        <a href="cart.html" class="icon-btn" aria-label="Cart">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/>
+            <path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"/>
+          </svg>
+          <span class="badge">3</span>
+        </a>
+        <a href="account.html" class="icon-btn" aria-label="Account">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="8" r="4"/><path d="M4 21v-2a6 6 0 0 1 6-6h4a6 6 0 0 1 6 6v2"/>
+          </svg>
+        </a>
+      </nav>
+      <button class="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ================= ACCOUNT LAYOUT ================= -->
+  <main class="container account-layout">
+
+    <!-- ========== SIDEBAR ========== -->
+    <aside class="account-sidebar" id="accountSidebar">
+      <div class="sidebar-profile">
+        <img src="https://i.pravatar.cc/120?img=12" alt="John Doe" class="sidebar-profile__avatar" />
+        <div>
+          <strong>John Doe</strong>
+          <p>john.doe@example.com</p>
+        </div>
+      </div>
+
+      <nav class="sidebar-nav">
+        <a href="account.html" class="sidebar-link">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/>
+            <rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/>
+          </svg>
+          Dashboard
+        </a>
+        <a href="orders.html" class="sidebar-link">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+            <path d="M3 6h18M16 10a4 4 0 0 1-8 0"/>
+          </svg>
+          My Orders
+          <span class="sidebar-badge">2</span>
+        </a>
+        <a href="wishlist.html" class="sidebar-link active">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"/>
+          </svg>
+          Wishlist
+        </a>
+        <a href="addresses.html" class="sidebar-link">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+            <circle cx="12" cy="10" r="3"/>
+          </svg>
+          Addresses
+        </a>
+        <a href="profile-settings.html" class="sidebar-link">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="3"/>
+            <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+          </svg>
+          Settings
+        </a>
+        <div class="sidebar-divider"></div>
+        <a href="../index.html" class="sidebar-link sidebar-link--danger" id="logoutBtn">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/>
+            <polyline points="16 17 21 12 16 7"/>
+            <line x1="21" y1="12" x2="9" y2="12"/>
+          </svg>
+          Logout
+        </a>
+      </nav>
+    </aside>
+
+    <!-- ========== MAIN CONTENT ========== -->
+    <section class="account-main">
+
+      <!-- Page head -->
+      <div class="page-head">
+        <div>
+          <h1>My Wishlist</h1>
+          <p class="muted"><span id="wishCount">5</span> items saved for later</p>
+        </div>
+      </div>
+
+      <!-- Toolbar -->
+      <div class="wishlist-toolbar" id="wishToolbar">
+        <div class="toolbar-left">
+          <button class="btn btn--primary btn--sm" id="addAllBtn">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/>
+              <path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"/>
+            </svg>
+            Add All to Cart
+          </button>
+          <button class="btn btn--ghost btn--sm" id="shareBtn">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/>
+              <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/>
+              <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/>
+            </svg>
+            Share
+          </button>
+        </div>
+        <button class="btn btn--ghost btn--sm toolbar-clear" id="clearAllBtn">
+          Clear Wishlist
+        </button>
+      </div>
+
+      <!-- Wishlist grid -->
+      <div class="wishlist-grid" id="wishlistGrid">
+
+        <!-- Item 1 -->
+        <article class="wish-card" data-price="89.99" data-id="1">
+          <div class="wish-card__img">
+            <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400&q=80" alt="Headphones" />
+            <span class="tag tag--sale">-30%</span>
+            <button class="wish-remove" aria-label="Remove from wishlist" title="Remove">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 6 6 18M6 6l12 12"/>
+              </svg>
+            </button>
+          </div>
+          <div class="wish-card__body">
+            <span class="vendor-tag">TechZone</span>
+            <h3>Wireless Headphones Pro</h3>
+            <div class="rating">★★★★★ <span>(128)</span></div>
+            <div class="price">
+              <span class="price__now">$89.99</span>
+              <span class="price__old">$129.99</span>
+            </div>
+            <div class="wish-card__stock">
+              <span class="in-stock">● In Stock</span>
+            </div>
+            <button class="btn btn--primary btn--block wish-add-cart">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/>
+                <path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"/>
+              </svg>
+              Add to Cart
+            </button>
+          </div>
+        </article>
+
+        <!-- Item 2 -->
+        <article class="wish-card" data-price="149.00" data-id="2">
+          <div class="wish-card__img">
+            <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=400&q=80" alt="Watch" />
+            <span class="tag tag--new">New</span>
+            <button class="wish-remove" aria-label="Remove from wishlist" title="Remove">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 6 6 18M6 6l12 12"/>
+              </svg>
+            </button>
+          </div>
+          <div class="wish-card__body">
+            <span class="vendor-tag">GadgetPro</span>
+            <h3>Smart Watch Series 5</h3>
+            <div class="rating">★★★★☆ <span>(86)</span></div>
+            <div class="price">
+              <span class="price__now">$149.00</span>
+            </div>
+            <div class="wish-card__stock">
+              <span class="in-stock">● In Stock</span>
+            </div>
+            <button class="btn btn--primary btn--block wish-add-cart">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/>
+                <path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"/>
+              </svg>
+              Add to Cart
+            </button>
+          </div>
+        </article>
+
+        <!-- Item 3 -->
+        <article class="wish-card" data-price="79.00" data-id="3">
+          <div class="wish-card__img">
+            <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&q=80" alt="Sneakers" />
+            <span class="tag tag--sale">-20%</span>
+            <button class="wish-remove" aria-label="Remove from wishlist" title="Remove">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 6 6 18M6 6l12 12"/>
+              </svg>
+            </button>
+          </div>
+          <div class="wish-card__body">
+            <span class="vendor-tag">Fashion Hub</span>
+            <h3>Running Sneakers Air</h3>
+            <div class="rating">★★★★★ <span>(210)</span></div>
+            <div class="price">
+              <span class="price__now">$79.00</span>
+              <span class="price__old">$99.00</span>
+            </div>
+            <div class="wish-card__stock">
+              <span class="in-stock">● In Stock</span>
+            </div>
+            <button class="btn btn--primary btn--block wish-add-cart">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/>
+                <path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"/>
+              </svg>
+              Add to Cart
+            </button>
+          </div>
+        </article>
+
+        <!-- Item 4 -->
+        <article class="wish-card" data-price="45.00" data-id="4">
+          <div class="wish-card__img">
+            <img src="https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=400&q=80" alt="Sunglasses" />
+            <button class="wish-remove" aria-label="Remove from wishlist" title="Remove">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 6 6 18M6 6l12 12"/>
+              </svg>
+            </button>
+          </div>
+          <div class="wish-card__body">
+            <span class="vendor-tag">Fashion Hub</span>
+            <h3>Classic Aviator Sunglasses</h3>
+            <div class="rating">★★★★☆ <span>(54)</span></div>
+            <div class="price">
+              <span class="price__now">$45.00</span>
+            </div>
+            <div class="wish-card__stock">
+              <span class="in-stock">● In Stock</span>
+            </div>
+            <button class="btn btn--primary btn--block wish-add-cart">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/>
+                <path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"/>
+              </svg>
+              Add to Cart
+            </button>
+          </div>
+        </article>
+
+        <!-- Item 5 (out of stock) -->
+        <article class="wish-card wish-card--oos" data-price="1299.00" data-id="5">
+          <div class="wish-card__img">
+            <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=400&q=80" alt="MacBook" />
+            <span class="tag tag--oos">Out of Stock</span>
+            <button class="wish-remove" aria-label="Remove from wishlist" title="Remove">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 6 6 18M6 6l12 12"/>
+              </svg>
+            </button>
+          </div>
+          <div class="wish-card__body">
+            <span class="vendor-tag">TechZone</span>
+            <h3>MacBook Air M2 13"</h3>
+            <div class="rating">★★★★★ <span>(320)</span></div>
+            <div class="price">
+              <span class="price__now">$1,299.00</span>
+            </div>
+            <div class="wish-card__stock">
+              <span class="out-stock">● Out of Stock</span>
+            </div>
+            <button class="btn btn--ghost btn--block wish-notify" disabled>
+              🔔 Notify When Available
+            </button>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- Empty state -->
+      <div class="wishlist-empty" id="wishEmpty" hidden>
+        <div class="wishlist-empty__icon">💝</div>
+        <h2>Your wishlist is empty</h2>
+        <p>Save products you love and find them here anytime.</p>
+        <a href="shop.html" class="btn btn--primary btn--lg">Browse Products</a>
+      </div>
+
+    </section>
+  </main>
+
+  <!-- ================= TOAST ================= -->
+  <div class="toast" id="toast">
+    <span class="toast__icon">✓</span>
+    <span class="toast__msg">Item added to cart</span>
+  </div>
+
+  <!-- ================= FOOTER (simplified) ================= -->
+  <footer class="footer">
+    <div class="footer__bottom">
+      <p>© 2026 ShopHub. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/wishlist.js"></script>
+</body>
+</html>

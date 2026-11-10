@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vendors — ShopHub Admin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/css/global.css" />
+  <link rel="stylesheet" href="../assets/css/admin-shared.css" />
+  <link rel="stylesheet" href="../assets/css/admin-vendors.css" />
+</head>
+<body class="admin-body">
+  <div class="admin-layout">
+    <aside class="a-sidebar" id="aSidebar">
+      <div class="a-brand"><a href="../index.html" class="logo">Shop<span>Hub</span></a><span class="a-brand-badge">Admin</span></div>
+      <div class="a-admin-mini"><img src="https://i.pravatar.cc/80?img=68" alt="" /><div><strong>Super Admin</strong><span>admin@shophub.com</span></div></div>
+      <nav class="a-nav">
+        <a href="dashboard.html" class="a-link"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="9" rx="1"/><rect x="14" y="3" width="7" height="5" rx="1"/><rect x="14" y="12" width="7" height="9" rx="1"/><rect x="3" y="16" width="7" height="5" rx="1"/></svg>Dashboard</a>
+        <a href="vendors.html" class="a-link active"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>Vendors<span class="a-badge a-badge--warn">5</span></a>
+        <a href="products.html" class="a-link"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 7l-8-4-8 4 8 4 8-4z"/><path d="M4 7v10l8 4 8-4V7"/><path d="M12 11v10"/></svg>Products</a>
+        <a href="orders.html" class="a-link"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><path d="M3 6h18M16 10a4 4 0 0 1-8 0"/></svg>Orders</a>
+        <a href="payouts.html" class="a-link"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>Payouts<span class="a-badge">3</span></a>
+        <a href="customers.html" class="a-link"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>Customers</a>
+        <div class="a-divider"></div>
+        <div class="a-nav-label">System</div>
+        <a href="categories.html" class="a-link"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>Categories</a>
+        <a href="settings.html" class="a-link"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>Settings</a>
+        <div class="a-divider"></div>
+        <a href="login.html" class="a-link a-link--danger" id="aLogout"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>Logout</a>
+      </nav>
+    </aside>
+
+    <div class="a-main">
+      <header class="a-topbar">
+        <button class="a-menu-toggle" id="aMenuToggle"><span></span><span></span><span></span></button>
+        <div class="a-search"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg><input type="text" placeholder="Search vendors..." id="vendorSearch" /></div>
+        <div class="a-topbar-right">
+          <button class="a-icon-btn"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></svg><span class="a-dot"></span></button>
+          <a href="settings.html" class="a-user"><img src="https://i.pravatar.cc/80?img=68" alt="" /><strong>Admin</strong></a>
+        </div>
+      </header>
+
+      <div class="a-content">
+        <div class="a-pagehead">
+          <div><h1>Vendors</h1><p>Manage all vendors on the platform</p></div>
+          <button class="btn btn--ghost btn--sm">⤓ Export CSV</button>
+        </div>
+
+        <div class="a-card" style="padding:12px 16px;margin-bottom:16px">
+          <div class="filter-row">
+            <div class="filter-tabs">
+              <button class="ftab active" data-filter="all">All <span>1,248</span></button>
+              <button class="ftab" data-filter="approved">Approved <span>1,240</span></button>
+              <button class="ftab" data-filter="pending">Pending <span>5</span></button>
+              <button class="ftab" data-filter="suspended">Suspended <span>3</span></button>
+            </div>
+            <select class="mini-select"><option>Sort: Newest</option><option>Sort: Oldest</option><option>Sort: Revenue</option></select>
+          </div>
+        </div>
+
+        <div class="a-card">
+          <div class="a-table-wrap">
+            <table class="a-table">
+              <thead>
+                <tr><th>Vendor</th><th>Owner</th><th>Category</th><th>Products</th><th>Revenue</th><th>Status</th><th>Actions</th></tr>
+              </thead>
+              <tbody id="vendorBody">
+                <tr data-name="techzone" data-status="approved">
+                  <td>
+                    <div class="vendor-cell">
+                      <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=60&q=80" alt="" />
+                      <div><strong>TechZone</strong><span>techzone.com</span></div>
+                    </div>
+                  </td>
+                  <td>John Smith<br /><span style="font-size:11px;color:var(--text-muted)">john@techzone.com</span></td>
+                  <td>Electronics</td>
+                  <td>248</td>
+                  <td><strong>$24,860</strong></td>
+                  <td><span class="st st--approved">Approved</span></td>
+                  <td>
+                    <a href="vendor-detail.html" class="icon-action" title="View"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8S1 12 1 12z"/><circle cx="12" cy="12" r="3"/></svg></a>
+                    <button class="icon-action icon-action--danger suspend-btn" title="Suspend"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"/></svg></button>
+                  </td>
+                </tr>
+                <tr data-name="fashionhub" data-status="approved">
+                  <td>
+                    <div class="vendor-cell">
+                      <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=60&q=80" alt="" />
+                      <div><strong>Fashion Hub</strong><span>fashionhub.com</span></div>
+                    </div>
+                  </td>
+                  <td>Maria Chen<br /><span style="font-size:11px;color:var(--text-muted)">maria@fashionhub.com</span></td>
+                  <td>Fashion</td>
+                  <td>412</td>
+                  <td><strong>$18,240</strong></td>
+                  <td><span class="st st--approved">Approved</span></td>
+                  <td>
+                    <a href="vendor-detail.html" class="icon-action"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8S1 12 1 12z"/><circle cx="12" cy="12" r="3"/></svg></a>
+                    <button class="icon-action icon-action--danger suspend-btn"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"/></svg></button>
+                  </td>
+                </tr>
+                <tr data-name="homestyle" data-status="approved">
+                  <td>
+                    <div class="vendor-cell">
+                      <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=60&q=80" alt="" />
+                      <div><strong>HomeStyle</strong><span>homestyle.com</span></div>
+                    </div>
+                  </td>
+                  <td>Sam Rahman<br /><span style="font-size:11px;color:var(--text-muted)">sam@homestyle.com</span></td>
+                  <td>Home & Living</td>
+                  <td>186</td>
+                  <td><strong>$12,540</strong></td>
+                  <td><span class="st st--approved">Approved</span></td>
+                  <td>
+                    <a href="vendor-detail.html" class="icon-action"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8S1 12 1 12z"/><circle cx="12" cy="12" r="3"/></svg></a>
+                    <button class="icon-action icon-action--danger suspend-btn"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"/></svg></button>
+                  </td>
+                </tr>
+                <tr data-name="gadgetpro" data-status="pending">
+                  <td>
+                    <div class="vendor-cell">
+                      <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=60&q=80" alt="" />
+                      <div><strong>GadgetPro</strong><span>gadgetpro.com</span></div>
+                    </div>
+                  </td>
+                  <td>Alex Johnson<br /><span style="font-size:11px;color:var(--text-muted)">alex@gadgetpro.com</span></td>
+                  <td>Electronics</td>
+                  <td>0</td>
+                  <td><strong>$0</strong></td>
+                  <td><span class="st st--pending">Pending</span></td>
+                  <td>
+                    <a href="vendor-detail.html" class="icon-action"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8S1 12 1 12z"/><circle cx="12" cy="12" r="3"/></svg></a>
+                    <button class="icon-action icon-action--success approve-btn" title="Approve"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg></button>
+                  </td>
+                </tr>
+                <tr data-name="sneakerworld" data-status="suspended">
+                  <td>
+                    <div class="vendor-cell">
+                      <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=60&q=80" alt="" />
+                      <div><strong>Sneaker World</strong><span>sneakerworld.com</span></div>
+                    </div>
+                  </td>
+                  <td>Sara Khan<br /><span style="font-size:11px;color:var(--text-muted)">sara@sneakerworld.com</span></td>
+                  <td>Fashion</td>
+                  <td>64</td>
+                  <td><strong>$3,210</strong></td>
+                  <td><span class="st st--suspended">Suspended</span></td>
+                  <td>
+                    <a href="vendor-detail.html" class="icon-action"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8S1 12 1 12z"/><circle cx="12" cy="12" r="3"/></svg></a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="a-pagination">
+            <span>Showing 1–5 of 1,248</span>
+            <div class="pg-btns">
+              <button class="page-btn" disabled>‹</button>
+              <button class="page-btn active">1</button>
+              <button class="page-btn">2</button>
+              <button class="page-btn">3</button>
+              <button class="page-btn">›</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="a-overlay" id="aOverlay"></div>
+  <script src="../assets/js/admin-shared.js"></script>
+  <script>
+    // Filter
+    document.querySelectorAll('.ftab').forEach(tab => {
+      tab.addEventListener('click', () => {
+        document.querySelectorAll('.ftab').forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        const f = tab.dataset.filter;
+        document.querySelectorAll('#vendorBody tr').forEach(r => {
+          r.style.display = (f === 'all' || r.dataset.status === f) ? '' : 'none';
+        });
+      });
+    });
+    // Search
+    document.getElementById('vendorSearch')?.addEventListener('input', e => {
+      const q = e.target.value.toLowerCase();
+      document.querySelectorAll('#vendorBody tr').forEach(r => {
+        r.style.display = r.dataset.name.includes(q) ? '' : 'none';
+      });
+    });
+    // Suspend
+    document.querySelectorAll('.suspend-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        if (!confirm('Suspend this vendor?')) return;
+        const row = btn.closest('tr');
+        row.dataset.status = 'suspended';
+        row.querySelector('.st').className = 'st st--suspended';
+        row.querySelector('.st').textContent = 'Suspended';
+        showAToast('Vendor suspended');
+      });
+    });
+    // Approve
+    document.querySelectorAll('.approve-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const row = btn.closest('tr');
+        row.dataset.status = 'approved';
+        row.querySelector('.st').className = 'st st--approved';
+        row.querySelector('.st').textContent = 'Approved';
+        showAToast('Vendor approved');
+      });
+    });
+  </script>
+</body>
+</html>
